@@ -1,0 +1,9 @@
+Data of T. rex from Myhrvold 2013, Revisint the Estimation of Dinosaur Growth Rates
+
+2	29.9
+14	1807
+15	1761
+16	2984
+18	3230
+22	5040
+28	5654
