@@ -1,9 +1,11 @@
-Data of T. rex from Myhrvold 2013, Revisint the Estimation of Dinosaur Growth Rates
+Data of Saurornitholestesfrom Myhrvold 2013, Revising the Estimation of Dinosaur Growth Rates
 
-2	29.9
-14	1807
-15	1761
-16	2984
-18	3230
-22	5040
-28	5654
+2	30
+3	40
+4	55
+5	69
+6	72
+7	81
+10	82
+15	88
+19	92
