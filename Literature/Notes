@@ -1,0 +1,20 @@
+Dinosaur Growth
+
+Most of the widely used models are sigmoidal (S shaped), these include the Gompertz, von Bertalanffy and logistic curves.
+
+Another widely used family of models are attenuating curves such as the monomolecular (negative exponential) curve.
+
+Although many studies feature exlusive asymptotic models there are exceptions. Power-law and linear... 
+
+Choice of dependent variable
+
+Kaufman 1981 - use size as independent variable
+Myhrvold - many dinosaur models use age as independent 
+
+Given that Model I regression assumes there is no error in the independent variable then the choice of independent variable should be in the more accurate measurement. 
+
+
+Loss models
+    soft_l1 = Smooth L1-loss
+    Smooth L1-loss combines the advantages of L1-loss (steady gradients for large values of x) and L2-loss (less oscillations during updates when x is small).
+
