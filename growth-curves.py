@@ -76,213 +76,230 @@ certain = True
 
 # Models
 
-model_list = ['Gompertz', 'Quadratic', 'Logistic', 'vonBertalanffy', 'monomolecular', 'ChapmanRichards', 'HeLegendre', 'Korf', 'Weibull', 'MichaelisMenten', 'NegativeExponential',
-              'Power', 'MorganMercerFlodin', 'UnifiedRichards4', 'logistic_2', 'linear', 'vonBertalanffy2','Richards4'] 
-model_list_i = ['Gompertz_3a_i', 'monomolecular_i', 'vonBertalanffy_i', 'HeLegendre_i', 'Korf_i', 'logistic_i', 'MMF_i', 'Weibull_i', 'MichaelisMenten_i', 'NegativeExponential_i',
-              'Power_i', 'Power2_i', 'ChapmanRichards_i']
-if not (regression_type=='OLS_i'):		  
-	def Richards6(param,xp):
-		# A K Q B M V
-		# 0 1 2 3 4 5
-		num = param[1]-param[0]
-		if certain:
-			den = np.exp(-param[3]*(xp-param[4]))
-		else:
-			den = unp.exp(-param[3]*(xp-param[4]))
-		den = (1+ den*param[2])**(1/param[5])
-		y_pred = param[0]+num/den
+model_list = ['Gompertz', 'Quadratic', 'logistic', 'vonBertalanffy', 'monomolecular', 'ChapmanRichards', 'HeLegendre', 'Korf', 'Weibull', 'MichaelisMenten', 'NegativeExponential',
+              'Power', 'Power2','MorganMercerFlodin', 'UnifiedRichards4', 'logistic_2', 'linear', 'vonBertalanffy2','HeLegendre2', \
+				  'Levakovic2','Levakovic'] 
+				  
+model_list_i = ['Gompertz_i', 'monomolecular_i', 'vonBertalanffy_i', 'HeLegendre_i', 'Korf_i', 'logistic_i', 'MorganMercerFlodin_i', 'Weibull_i', 'MichaelisMenten_i', 'NegativeExponential_i',
+              'Power_i', 'Power2_i', 'ChapmanRichards_i','HeLegendre2_i','ExtremeValue_i', \
+				  'Levakovic2_i','Levakovic_i','linear_i']
+if regression_type=='OLS_i':
+	model_list_print = model_list_i
+else:
+	model_list_print = model_list
+# forward direction functions are required for plotting.
+def Power2(param,xp):
+		y_pred = (param[0]*xp) ** param[1]
 		return y_pred
+def Levakovic2(param,xp):
+	y_pred = (((xp **2)/(1+xp **2)) ** param[1])*param[0]
+	return y_pred
+def Levakovic(param,xp):
+	y_pred = (((xp **2)/(param[1]+(xp **2))) ** param[2])*param[0]
+	return y_pred
+def Richards6(param,xp):
+	# A K Q B M V
+	# 0 1 2 3 4 5
+	num = param[1]-param[0]
+	if certain:
+		den = np.exp(-param[3]*(xp-param[4]))
+	else:
+		den = unp.exp(-param[3]*(xp-param[4]))
+	den = (1+ den*param[2])**(1/param[5])
+	y_pred = param[0]+num/den
+	return y_pred
 
-	def vonBertalanffy2(param, xp):
-		if certain:
-			y_pred = param[0]*((1-np.exp(-param[1]*xp))**3)
-		else:
-			y_pred = param[0]*((1-unp.exp(-param[1]*xp))**3)
-		return y_pred
-
-
-	def linear(param, xp):
-		y_pred = param[0]+param[1]*xp
-		return y_pred
-
-
-	def logistic_2(param, xp):
-		if certain:
-			y_pred = -1 + ((1+param[0])*np.exp(param[1]*xp)
-						)/(param[0]+np.exp(param[1]*xp))
-		else:
-			y_pred = -1 + ((1+param[0])*unp.exp(param[1]*xp)
-						)/(param[0]+unp.exp(param[1]*xp))
-		return y_pred
-
-
-	def UnifiedRichards4(param, xp):
-
-		A = param[0]
-		d = param[1]
-		W = param[2]
-		K = param[3]
-		# d cannot = 1
-		if (abs(d-1) < 1e-12):
-			dden = 0.367861
-		else:
-			dden = d ** (d/(1.0-d))  
-
-		if certain:
-			part1 = np.exp(-K*xp/dden)
-		else:
-			part1 = unp.exp(-K*xp/dden)
-		part2 = (W/A)**(1-d) - 1
-		y_pred = (1+part1*part2) ** (1/(1-d))
-		y_pred = A*(y_pred)
-		return y_pred
+def vonBertalanffy2(param, xp):
+	if certain:
+		y_pred = param[0]*((1-np.exp(-param[1]*xp))**3)
+	else:
+		y_pred = param[0]*((1-unp.exp(-param[1]*xp))**3)
+	return y_pred
 
 
-	def Richards4(param,xp):
-		# A d k T 	1 2 3 4
-		# d>-1
-		
-		# param[1] cannot equal 1 due to division by zero. 
-		if certain:
-			y_pred = np.exp(-param[2]*(xp-param[3]))
-		else:
-			y_pred = unp.exp(-param[2]*(xp-param[3]))
-		if (abs(param[1]-1) < 1e-12):
-			replace = copysign(1e-12,param[1]-1)
-			param[1] = param[1]+1
-		else:
-			y_pred = (1 + (param[1]-1)*y_pred) ** (1/(1-param[1]))
-		y_pred = y_pred*param[0]
-		return y_pred
-	# 3 variables: a,b,c
+def linear(param, xp):
+	y_pred = param[0]+param[1]*xp
+	return y_pred
 
 
-	def MorganMercerFlodin(param, xp):
-		y_pred = (param[0]*(xp**param[2]))/(param[1]+xp**param[2])
-		return y_pred
+def logistic_2(param, xp):
+	if certain:
+		y_pred = -1 + ((1+param[0])*np.exp(param[1]*xp)
+					)/(param[0]+np.exp(param[1]*xp))
+	else:
+		y_pred = -1 + ((1+param[0])*unp.exp(param[1]*xp)
+					)/(param[0]+unp.exp(param[1]*xp))
+	return y_pred
 
 
-	def Power(param, xp):
-		y_pred = param[2]+param[0]*(xp**param[1])
-		return y_pred
+def UnifiedRichards4(param, xp):
+
+	A = param[0]
+	d = param[1]
+	W = param[2]
+	K = param[3]
+	# d cannot = 1
+	if (abs(d-1) < 1e-12):
+		dden = 0.367861
+	else:
+		dden = d ** (d/(1.0-d))  
+
+	if certain:
+		part1 = np.exp(-K*xp/dden)
+	else:
+		part1 = unp.exp(-K*xp/dden)
+	part2 = (W/A)**(1-d) - 1
+	y_pred = (1+part1*part2) ** (1/(1-d))
+	y_pred = A*(y_pred)
+	return y_pred
 
 
-	def NegativeExponential(param, xp):
-		if certain:
-			y_pred = param[0]*(1-np.exp(-param[1]*(-param[2]+xp)))
-		else:
-			y_pred = param[0]*(1-unp.exp(-param[1]*(-param[2]+xp)))
-
-		return y_pred
-
-
-	def MichaelisMenten(param, xp):
-		y_pred = param[2]+(param[0]-param[2])*xp/(param[1]+xp)
-		return y_pred
-
-
-	def Weibull(param, xp):
-		if certain:
-			y_pred = -param[1]*(xp**param[2])
-			y_pred = param[0]*(1-np.exp(y_pred))
-		else:
-			y_pred = -param[1]*(xp**param[2])
-			y_pred = param[0]*(1-unp.exp(y_pred))
-		return y_pred
+def Richards4(param,xp):
+	# A d k T 	1 2 3 4
+	# d>-1
+	
+	# param[1] cannot equal 1 due to division by zero. 
+	if certain:
+		y_pred = np.exp(-param[2]*(xp-param[3]))
+	else:
+		y_pred = unp.exp(-param[2]*(xp-param[3]))
+	if (abs(param[1]-1) < 1e-12):
+		replace = copysign(1e-12,param[1]-1)
+		param[1] = param[1]+1
+	else:
+		y_pred = (1 + (param[1]-1)*y_pred) ** (1/(1-param[1]))
+	y_pred = y_pred*param[0]
+	return y_pred
+# 3 variables: a,b,c
 
 
-	def Korf(param, xp):
-		if certain:
-			y_pred = param[0]*np.exp(-param[1]*(xp**(-1*param[2])))
-		else:
-			y_pred = param[0]*unp.exp(-param[1]*(xp**(-1*param[2])))
-		return y_pred
+def MorganMercerFlodin(param, xp):
+	y_pred = (param[0]*(xp**param[2]))/(param[1]+xp**param[2])
+	return y_pred
 
 
-	def HeLegendre(param, xp):
-		num = param[0]*param[1]
-		den = param[1]+(xp**(-param[2]))
-		y_pred = num/den
-		return y_pred
+def Power(param, xp):
+	y_pred = param[2]+param[0]*(xp**param[1])
+	return y_pred
 
 
-	def ExtremeValue(param, xp):
-		if certain:
-			y_pred = -np.log(param[2]+param[1]*xp)
-			y_pred = param[0]*(1+np.exp(y_pred))
-		else:
-			y_pred = -unp.log(param[2]+param[1]*xp)
-			y_pred = param[0]*(1+unp.exp(y_pred))
-		return y_pred
+def NegativeExponential(param, xp):
+	if certain:
+		y_pred = param[0]*(1-np.exp(-param[1]*(-param[2]+xp)))
+	else:
+		y_pred = param[0]*(1-unp.exp(-param[1]*(-param[2]+xp)))
+
+	return y_pred
 
 
-	def Quadratic(x, xp):
-		y_pred = x[0]*xp**2 + x[1]*xp + x[2]
-		y_pred = np.array(y_pred)
-		# parameter unceratinty is okay.
-		return y_pred
-
-	# Gompertz 3a 	    3 Variables: a,b,c
+def MichaelisMenten(param, xp):
+	y_pred = param[2]+(param[0]-param[2])*xp/(param[1]+xp)
+	return y_pred
 
 
-	def Gompertz(x, xp):
-		if certain:
-			y_pred = np.exp(-x[2]*xp)*x[1]*-1
-			y_pred = x[0]*np.exp(y_pred)
-		else:
-			y_pred = unp.exp(-x[2]*xp)*x[1]*-1
-			y_pred = x[0]*unp.exp(y_pred)
-		return y_pred
-
-	# Logistic 3a 	    3 Variables: a,b,c
+def Weibull(param, xp):
+	if certain:
+		y_pred = -param[1]*(xp**param[2])
+		y_pred = param[0]*(1-np.exp(y_pred))
+	else:
+		y_pred = -param[1]*(xp**param[2])
+		y_pred = param[0]*(1-unp.exp(y_pred))
+	return y_pred
 
 
-	def Logistic(x, xp):
-		if certain:
-			y_pred = np.exp(-x[1]*(-x[2]+xp))
-			y_pred = x[0]/(1+y_pred)
-		else:
-			y_pred = unp.exp(-x[1]*(-x[2]+xp))
-			y_pred = x[0]/(1+y_pred)
-		return y_pred
-
-	# von Bertalanffy 3
+def Korf(param, xp):
+	if certain:
+		y_pred = param[0]*np.exp(-param[1]*(xp**(-1*param[2])))
+	else:
+		y_pred = param[0]*unp.exp(-param[1]*(xp**(-1*param[2])))
+	return y_pred
 
 
-	def vonBertalanffy(x, xp):
-		if certain:
-			y_pred = 1-np.exp(-x[1]*(-x[2]+xp))
-			y_pred = x[0]*(y_pred**3)
-		else:
-			y_pred = 1-unp.exp(-x[1]*(-x[2]+xp))
-			y_pred = x[0]*(y_pred**3)
-		return y_pred
-
-	# monomolecular
+def HeLegendre(param, xp):
+	num = param[0]*param[1]
+	den = param[1]+(xp**(-param[2]))
+	y_pred = num/den
+	return y_pred
 
 
-	def monomolecular(x, xp):
-
-		if certain:
-			y_pred = np.exp(-x[1]*xp)
-			y_pred = x[0]*(1-x[2]*y_pred)
-		else:
-			y_pred = unp.exp(-x[1]*xp)
-			y_pred = x[0]*(1-x[2]*y_pred)
-		return y_pred
-
-	# Chapman-Richards
+def ExtremeValue(param, xp):
+	if certain:
+		y_pred = -np.log(param[2]+param[1]*xp)
+		y_pred = param[0]*(1+np.exp(y_pred))
+	else:
+		y_pred = -unp.log(param[2]+param[1]*xp)
+		y_pred = param[0]*(1+unp.exp(y_pred))
+	return y_pred
 
 
-	def ChapmanRichards(x, xp):
+def Quadratic(x, xp):
+	y_pred = x[0]*xp**2 + x[1]*xp + x[2]
+	y_pred = np.array(y_pred)
+	# parameter unceratinty is okay.
+	return y_pred
 
-		if certain:
-			y_pred = 1-np.exp(-x[1]*xp)
-			y_pred = x[0]*(y_pred**x[2])
-		else:
-			y_pred = 1-unp.exp(-x[1]*xp)
-			y_pred = x[0]*(y_pred**x[2])
-		return y_pred
+
+def Gompertz(x, xp):
+	if certain:
+		y_pred = np.exp(-x[2]*xp)*x[1]*-1
+		y_pred = x[0]*np.exp(y_pred)
+	else:
+		y_pred = unp.exp(-x[2]*xp)*x[1]*-1
+		y_pred = x[0]*unp.exp(y_pred)
+	return y_pred
+
+def HeLegendre2(param,xp):
+	y_pred = param[0]/(1 + xp ** (-param[1]))
+	return y_pred
+
+def logistic(x, xp):
+	if certain:
+		y_pred = np.exp(-x[1]*(-x[2]+xp))
+		y_pred = x[0]/(1+y_pred)
+	else:
+		y_pred = unp.exp(-x[1]*(-x[2]+xp))
+		y_pred = x[0]/(1+y_pred)
+	return y_pred
+
+# von Bertalanffy 3
+
+
+def vonBertalanffy(x, xp):
+	if certain:
+		y_pred = 1-np.exp(-x[1]*(-x[2]+xp))
+		y_pred = x[0]*(y_pred**3)
+	else:
+		y_pred = 1-unp.exp(-x[1]*(-x[2]+xp))
+		y_pred = x[0]*(y_pred**3)
+	return y_pred
+
+# monomolecular
+
+
+def monomolecular(x, xp):
+
+	if certain:
+		y_pred = np.exp(-x[1]*xp)
+		y_pred = x[0]*(1-x[2]*y_pred)
+	else:
+		y_pred = unp.exp(-x[1]*xp)
+		y_pred = x[0]*(1-x[2]*y_pred)
+	return y_pred
+
+# Chapman-Richards
+
+
+def ChapmanRichards(x, xp):
+
+	if certain:
+		y_pred = 1-np.exp(-x[1]*xp)
+		y_pred = x[0]*(y_pred**x[2])
+	else:
+		y_pred = 1-unp.exp(-x[1]*xp)
+		y_pred = x[0]*(y_pred**x[2])
+	return y_pred
+if not (regression_type=='OLS_i'):	
+	
 
 
 	def model_y(param, xp):
@@ -352,7 +369,8 @@ if not (regression_type=='OLS_i'):
 		# call the least square solver
 		# defining the bounds
 		uplow = ([0, 0, -np.inf], np.inf)
-		if (model_name == 'ChapmanRichards' or model_name == 'monomolecular' or model_name == 'Gompertz' or model_name == 'HeLegendre' or model_name == 'Korf' or model_name == 'Weibull'):
+		if (model_name == 'ChapmanRichards' or model_name == 'monomolecular' or model_name == 'Gompertz' \
+			or model_name == 'HeLegendre' or model_name == 'Korf' or model_name == 'Weibull' or model_name =='Levakovic'):
 			uplow = ([0, 0, 0], np.inf)
 		if (model_name == 'Power'):
 			uplow = ([0, -np.inf, -np.inf], np.inf)
@@ -373,7 +391,8 @@ if not (regression_type=='OLS_i'):
 
 
 			
-		if(model_name == 'logistic_2' or model_name == 'vonBertalanffy2'):
+		if(model_name == 'logistic_2' or model_name == 'vonBertalanffy2' or \
+			model_name=='HeLegendre2' or model_name =='Levakovic2' or model_name =='Power2'):
 			x0 = np.ones(2)
 			uplow = ([0, 0], np.inf)
 		if (model_name == 'linear'):
@@ -553,7 +572,9 @@ if not (regression_type=='OLS_i'):
 else:
 
 	# Common growth models, inverted:
-
+	def HeLegendre2_i(param,y):
+		x = (-1+param[0]/y) ** (-1/param[1])
+		return x
 	def ChapmanRichards_i(param, y):
 		if certain:
 			x = np.log(1-((y/param[0])**(1/param[2])))
@@ -568,18 +589,7 @@ else:
 
 
 	def Power2_i(param, y):
-		x = (-param[1]+(y ** param[2]))/param[0]
-		return x
-
-
-	def Richards_inverse(param, y, m):
-		# param[0:1]=abs(param[0:1])
-		num = ((y/param[0]) ** (1-m)) - 1
-		dem = m-1
-		if certain:
-			x = (-1/param[1])*np.log(num/dem)+param[2]
-		else:
-			x = (-1/param[1])*unp.log(num/dem)+param[2]
+		x = (y/param[0])**(1/param[1])
 		return x
 
 
@@ -592,15 +602,20 @@ else:
 
 
 	def vonBertalanffy_i(param, y):
-		m = 2/3.0
-		x = Richards_inverse(param, y, m)
+		if certain:
+			x = np.log(1-((y/param[0]) ** (1/3)))
+		else:
+			x = unp.log(1-((y/param[0]) ** (1/3)))
+		x = (param[1]*param[2]-x)/param[1]
 		return x
 
 
 	def monomolecular_i(param, y):
-		# param[2]=abs(param[2])
-		m = 0
-		x = Richards_inverse(param, y, m)
+		if certain:
+			x = np.log(-(-param[0]+y)/(param[0]*param[2]))
+		else:
+			x = unp.log(-(-param[0]+y)/(param[0]*param[2]))
+		x = -x/param[1]
 		return x
 
 
@@ -611,8 +626,27 @@ else:
 			x = (param[1]*param[2]-unp.log(-1+param[0]/y))/param[1]
 		return x
 
-
-	def Gompertz_3a_i(param, y):
+	def Levakovic2_i(param,y):
+		num = (y/param[0]) ** (1/param[1])
+		den = 1-num
+		if certain:
+			x = np.sqrt(num/den)
+		else:
+			x = unp.sqrt(num/den)
+		return x
+	def Levakovic_i(param,y):
+		if certain:
+			num = (y/param[0]) ** (1/(2*param[2])) * np.sqrt(param[1])
+			den = np.sqrt(1-((y/param[0]) ** (1/param[2])))
+		else: 
+			num = (y/param[0]) ** (1/(2*param[2])) * unp.sqrt(param[1])
+			den = unp.sqrt(1-((y/param[0]) ** (1/param[2])))
+		x = num/den
+		return x
+	def linear_i(param,y):
+		x = (-param[1]+y)/param[0]
+		return x
+	def Gompertz_i(param, y):
 		if certain:
 			x = np.log(y/param[0])
 			x = np.log(-x/param[1])
@@ -637,21 +671,33 @@ else:
 		return x
 
 
-	def MMF_i(param, y):
+	def MorganMercerFlodin_i(param, y):
 		x = (-(-param[0]+y)/(param[1]*y)) ** (-1/param[2])
 		return x
 
 
 	def Weibull_i(param, y):
-		if certain:
-			x = -np.log(-(-param[0]+y)/param[0])/param[1]
-			x = x ** (-1/param[2])
-		else:
-			x = -unp.log(-(-param[0]+y)/param[0])/param[1]
-			x = x ** (-1/param[2])
+		try:
+			if certain:
+				x = -np.log(-(-param[0]+y)/param[0])/param[1]
+				x = x ** (-1/param[2])
+			else:
+				x = -unp.log(-(-param[0]+y)/param[0])/param[1]
+				x = x ** (-1/param[2])
+		except:
+			x=np.zeros(np.size(y))
 		return x
-
-
+	def ExtremeValue_i(param,y):
+		x = -(-param[0]+y)/param[0]
+		try:
+			if certain:
+				x = np.log(-np.log(x))
+			else:
+				x = unp.log(-unp.log(x))
+			x = (x-param[2])/param[1]
+		except:
+			x=np.zeros(np.size(y))
+		return x
 	def MichaelisMenten_i(param, y):
 		x = (-param[1]*param[2]+param[1]*y)/(param[0]-y)
 		return x
@@ -699,11 +745,11 @@ else:
 
 		# calculate dx
 
-		dx = quant*stdn*np.sqrt(1.0 + (1.0/Ns) + (sx/sxdev))
+		dx = quant*stdn*np.sqrt(1.0 + 1.0/Ns+ sx/sxdev)
 		low, upp = dep_points - dx, dep_points + dx
 		return low, upp
 
-
+	x1_points =  np.linspace(plot_range[0], plot_range[1], plot_points)
 	for model in model_list_i:
 		path='./Output/OLS_Inverse/'+model
 		model_name = model
@@ -711,15 +757,28 @@ else:
 		# giving initial guesses
 		p0[0] = max(y_exp)*1.4
 		uplow = ([max(y_exp), 0, -np.inf], np.inf)
-		if (model == 'monomolecular_i' or model == 'HeLegendre_i'or model == 'Korf_i' or model == 'MMF_i' or model == 'Weibull_i' or model == 'MichaelisMenten_i' or model == 'ChapmanRichards_i'):
+		if (model == 'monomolecular_i' or model == 'HeLegendre_i'or model == 'Korf_i' or model == 'MorganMercerFlodin_i' or \
+			 model == 'Weibull_i' or model == 'MichaelisMenten_i' or model == 'ChapmanRichards_i' or \
+				 model == "Levakovic_i"):
 			uplow = ([max(y_exp), 0, 0], np.inf)
-
+			p0[0] = max(y_exp)*1.4
+		if (model == 'ExtremeValue_i'):
+			uplow = ([max(y_exp), 0, -np.inf], np.inf)
 		if (model == 'Power_i'):
 			uplow = ([0, 0, -np.inf], [np.inf, np.inf, min(y_exp)])
 			p0 = [1, 1, min(y_exp)*0.5]
 		if (model == 'Power2_i'):
-			uplow = ([0, -np.inf, -np.inf], np.inf)
-
+			uplow = ([0, -np.inf], np.inf)
+			p0 = [1, min(y_exp)*0.5]
+		if (model == 'linear_i'):
+			uplow = ([0, -np.inf], np.inf)
+			p0 = [1, 1]
+		if (model =='HeLegendre2_i'):
+			uplow = ([max(y_exp),-np.inf],np.inf)
+			p0 = [max(y_exp)*1.1,1]
+		if (model == 'Levakovic2_i'):
+			uplow = ([max(y_exp),0],np.inf)
+			p0 = [max(y_exp)*1.1,1]
 		result = least_squares(calc_res, p0, method='trf',
 							jac='2-point', max_nfev=100*len(p0), bounds=uplow,loss=loss_fn)
 
@@ -761,7 +820,7 @@ else:
 		i=i+1
 		# After indentifying the best AIC the remainder should be scaled: delta AICc = AIC - AICmin.
 		# for listing later
-		y_points = np.linspace(plot_range[0], plot_range[1], 25)
+		
 
 		if (result.success):
 			print('Model: %s 	Residual: %4.2f 	AIC: %4.2f  R2: %4.2f ' %
@@ -769,15 +828,26 @@ else:
 			certain = True
 			x_pred = model_x(result.x, y_exp)
 			res = calc_res(result.x)
-			a, b, c = unc.correlated_values(result.x, pcov)
+			if len(result.x)==3:
+				a, b, c = unc.correlated_values(result.x, pcov)
+			elif len(result.x)==2:
+				a, b = unc.correlated_values(result.x, pcov)
+				c = ''
 			print('Uncertainty')
-			print('alpha: ' + str(a))
-			print('k: ' + str(b))
-			print('I: ' + str(c))
-
+			print('a: ' + str(a))
+			print('b: ' + str(b))
+			print('c: ' + str(c))
+			
+			
+			
+			# it is desirable to specify ages in plotting.
+			# so use specified x values to find the exact y values
+			# y_points = eval(model_name[0:-2])(result.x, x1_points)
+			y_points = np.linspace(min(y_exp), max(y_exp), plot_points)
 			certain = False
-			# calculating the uncertain x values
-
+			# then calculate the uncertain x values
+			
+			
 			x_unc = model_x(np.array([a, b, c]), y_points)
 			x_points = unp.nominal_values(x_unc)
 			std = unp.std_devs(x_unc)
@@ -792,13 +862,21 @@ else:
 			ax.plot(low, y_points, 'k--', label='95% Prediction band')
 			ax.plot(upp, y_points, 'k--')
 			ax.plot(x_exp, y_exp, 'bo', label='Experimental points')
-			ax.fill_between(x_points, y_points - 1.96*std,y_points + 1.96*std,
-			label='95% confidence band',alpha=0.2,color='C1')
-			ax.plot(x_points, y_points - 1.96*std,color='C1')
-			ax.plot(x_points, y_points + 1.96*std,color='C1')
+			#ax.fill_between(x_points, y_points - 1.96*std,y_points + 1.96*std,
+			#label='95% confidence band',alpha=0.2,color='C1')
+			# need to find the point at which std rapidly increases.
+			#lowx = x_points- 1.96*std
+			#low_y_points = y_points
+			#for k in range(len(lowx)):
+			#	if not k==0:
+			#		if lowx[k-1]>lowx[k]:
+			#			lowx[k]=lowx[k-1]
+			#			low_y_points[k]=low_y_points[k-1]
+				
+			ax.plot(x_points- 1.96*std, y_points ,color='C1')
+			ax.plot(x_points+ 1.96*std, y_points ,color='C1')
 			# uncertainty lines (95% confidence)
-
-			ax.set_xlim([0, None])
+			ax.set_xlim([plot_range[0], plot_range[1]+1])
 			ax.set_ylim([0, None])
 			ax.legend(loc='best')
 			fig.savefig(path+'.png')
@@ -858,8 +936,8 @@ file_out.write('Input:	%s\n' % file_name)
 file_out.write('Loss Method:	%s\n\n' % loss_fn)
 
 file_out.write('Model results in order of increasing deltaAIC:\n')
-sorted_list = [model_list for _,
-			model_list in sorted(zip(AIC_vec, model_list))]
+sorted_list = [model_list_print for _,
+			model_list_print in sorted(zip(AIC_vec, model_list_print))]
 sorted_AIC = [AIC_vec for _, AIC_vec in sorted(zip(AIC_vec, AIC_vec))]
 sorted_R2 = [R2vec for _, R2vec in sorted(zip(AIC_vec, R2vec))]
 sorted_R2bar = [R2barvec for _, R2barvec in sorted(zip(AIC_vec, R2barvec))]

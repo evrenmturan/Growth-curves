@@ -1,5 +1,5 @@
 Arnold Kangaroo FEMALE  data				
-1  11				
+0.5  12				
 
 1.3	6.2			
 1.3	6.6			

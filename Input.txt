@@ -1,8 +1,8 @@
 # Enter file below: examples are Example_Kangaroo_F.txt Example_P_Lujiatunensis_reduced.txt Example_Goats.txt Error_xy.txt
-Example_Kangaroo_F.txt
+Example_Kangaroo_M.txt
 # Type of regresion? ODR or OLS or OLS_i
-OLS_i
+ODR
 # What loss function for OLS? linear (default) or soft_l1 (good for outliers) if ODR uses linear only
-soft_l1 
+linear 
 # How many points to use in plotting? Default 30, reccomended >10
 30
