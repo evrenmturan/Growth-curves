@@ -1,21 +1,31 @@
 # Growth-curves
-Program to test various growth curves against data.
+_growth-curves.py_ automatically tests various growth curves against provided experimental data with a selection of different regression options. The outputs of the program include:
 
-Regression options include:
+ - A summary of results, including a list of models tested with their AIC, R2 and adjusted R2 values
+ - Plots of each model
+ - Data for each model that will allow the plots to be reproduced
+
+The program can perform three different types of regression:
 	
  - Ordinary Least Squares (OLS)
-	 + linear loss
-	 + soft_l2 loss
+ - Inverted OLS (OLS_i)
  - Orthogonal Distance Regression (ODR)
 
-These can be specified in Input.txt along with the data file.
+OLS should be used if the age estimate is without error, OLS_i should be used if the y value (size, mass, etc.) is without error, and ODR should be used if there is error in both variables.
 
-## Curves
+OLS(_i) can be used with linear or soft l1 loss. Soft l1 is less sensitive to the presence of outliers and can lead to a more robust regression.
+  
+## How to use
+To use the program simply fill in the necessary information in Input.txt file. One needs to provide the location of the experimental data, the method of regression, and the number of points used in the plotting.
+The experimental data must be provided in a text file (with . as the decimal separator). 
 
-A wide range of models are provided for fitting. Note that some models can issues in their fit, especially ones with a large number of parameters. If a model is fitted and gives a parameter with a large range, e.g. c = (0 +- 4)e6, this means that this parameter is fitted extremely loosely, and a more reduced form of the model would have been appropriate. Use of such a  model is therefore cautioned.
+The first line in the file should be the data title, followed by the range desired in the final plots, followed by a blank line and the data in column format. The first column should be age and the second column should be the growth parameter.
 
 ## Available Models
-If number of parameters are not stated in the below, assume 3 parameter form is used.
+
+A wide range of models are provided for fitting. Note that some models can issues in their fit, and may result in errors. If a model is fitted and gives a parameter with a uncertainty, e.g. c = (0 +- 4)e6, this means that this parameter is fitted extremely loosely, and a more reduced form of the model may have been appropriate. Use of such a  model is cautioned.
+
+The list of models available follows. Note that some models become extremely sensitive when inverted and are not used in the inverted OLS problem. If number of parameters are not stated in the below, then assume this is a 3 parameter form.
 ### OLS and ODR
 
  - Gompertz
@@ -30,16 +40,17 @@ If number of parameters are not stated in the below, assume 3 parameter form is 
  - Michaelis Menten
  - Negative Exponential
  - Power
- - Power (2 parameters)
+ - Levakovic
  - Morgan Mercer Flodin
  - Unified Richards (4 parameters)
+ - Richards (4 parameters) -- regression can easily fail
  - logistic (2 parameters)
  - linear (2 parameters)
  - von Bertalanffy (2 parameters)
- - Richards (4 parameters) : breaks, should be excluded
  - He Legendre (2 parameters)
  - Levakovic (2 parameters)
- - Levakovic
+ - Power (2 parameters)
+ 
  
 ### OLS inverse
 
@@ -54,12 +65,12 @@ If number of parameters are not stated in the below, assume 3 parameter form is 
  - Michaelis Menten
  - Negative Exponential
  - Power
- - Power (2 parameter)
  - Chapman Richards
  - Extreme Value
+ - Levakovic
  - He Lengendre (2 parameters)
  - Levakovic (2 parameters)  
- - Levakovic
+ - Power (2 parameter)
  - Linear (2 parameter)
  
  
