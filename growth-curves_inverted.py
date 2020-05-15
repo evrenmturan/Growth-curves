@@ -1,25 +1,20 @@
-"""	Growth Curves
-    Copyright 2020 Evren Mert Turan
-
-   Licensed under the Apache License, Version 2.0 (the "License");
-   you may not use this file except in compliance with the License.
-   You may obtain a copy of the License at
-
-       http://www.apache.org/licenses/LICENSE-2.0
-
-   Unless required by applicable law or agreed to in writing, software
-   distributed under the License is distributed on an "AS IS" BASIS,
-   WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
-   See the License for the specific language governing permissions and
-   limitations under the License.
+"""	Growth Curves 
+	Copyright (C) 2020 Evren Turan
+    This program is free software: you can redistribute it and/or modify
+    it under the terms of the GNU General Public License as published by
+    the Free Software Foundation, either version 3 of the License, or
+    (at your option) any later version.
+    This program is distributed in the hope that it will be useful,
+    but WITHOUT ANY WARRANTY; without even the implied warranty of
+    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+    GNU General Public License for more details.
+    You should have received a copy of the GNU General Public License
+    along with this program.  If not, see <https://www.gnu.org/licenses/>
 """
-
-# IMPORTANT NOTE!
-# Errors will occur in this code if one of the fitted parameters wraps around 0.
-# e.g. if a = 0.5 +/- 0.6
-# then the quoted confidence is incorrect
-
+import sys
 import matplotlib.pyplot as plt
+from math import copysign
+from scipy import odr
 from scipy import stats
 import uncertainties as unc
 import uncertainties.unumpy as unp
@@ -30,15 +25,33 @@ import numpy as np
 import matplotlib
 matplotlib.use('Agg')
 # Variables
+file_input = "Input.txt"
+file = open(file_input, "r")
 
-file_name = "Example_Goats_2.txt"
-file_name = 'Example_Kangaroo_Finv.txt'
-model_list = ['Gompertz_3a_i', 'monomolecular_i', 'vonBertalanffy_i', 'ExtremeValue_i', 'HeLegendre_i', 'Korf_i', 'logistic_i', 'MMF_i', 'Weibull_i', 'MichaelisMenten_i', 'NegativeExponential_i',
-              'Power_i', 'Power2_i', 'ChapmanRichards_i']
-#
+file.readline()  # line is comment
+file_name = file.readline()
+
+file.readline()  # line is comment
+regression_type = file.readline()  # 'OLR' or 'ODR' 
+
+file.readline() # line is comment
+loss_fn = file.readline()  # 'linear' or 'soft_l1'. 'soft_l1’ deals with outliers better
+file.readline() # line is comment
+plot_points = file.readline()  # 'linear' or 'soft_l1'. 'soft_l1’ deals with outliers better
+file.close()
+# remove whitespace
+file_name = file_name.strip()
+loss_fn = loss_fn.strip()
+regression_type=regression_type.strip()
+plot_points=plot_points.strip()
+plot_points=int(plot_points)
 # Open file, load title and read in data
 file = open(file_name, "r")
 Title = file.readline()
+
+model_list_i = ['Gompertz_3a_i', 'monomolecular_i', 'vonBertalanffy_i', 'HeLegendre_i', 'Korf_i', 'logistic_i', 'MMF_i', 'Weibull_i', 'MichaelisMenten_i', 'NegativeExponential_i',
+              'Power_i', 'Power2_i', 'ChapmanRichards_i']
+#
 plot_range = [float(val) for val in file.readline().split()]
 raw_data = file.readlines()
 file.close()
@@ -50,14 +63,15 @@ data = ([[float(val) for val in line.split()] for line in raw_data[1:]])
 data = np.array(data)
 x_exp = data[:, 0]
 y_exp = data[:, 1]
-
+# Calculating the Corrected sample deviation
+sx_exp = sum((x_exp-x_exp.mean()) ** 2)
+sx_exp2 = (sx_exp/(x_exp.size-1))
+sy_exp = sum((y_exp-y_exp.mean()) ** 2)
+sy_exp2 = (sy_exp/(y_exp.size-1))
 shape = data.shape
 certain = True
 
-# In general size/mass is more accurate measurement than age, and hence
-# should be used as the dependent variable for growth curves
-
-# Common growth models that are described by 3 variables:
+# Common growth models, inverted:
 
 
 def ChapmanRichards_i(param, y):
@@ -129,17 +143,6 @@ def Gompertz_3a_i(param, y):
         x = -x/param[2]
     return x
 
-
-def ExtremeValue_i(param, y):
-    if certain:
-        x = -np.log(-((-param[0]+y)/param[0]))
-        x = (-param[2]+np.log(x))/param[1]
-    else:
-        x = -unp.log(-((-param[0]+y)/param[0]))
-        x = (-param[2]+unp.log(x))/param[1]
-    return x
-
-
 def HeLegendre_i(param, y):
     x = (-param[1]+param[1]*param[0]/y)**(-1/param[2])
     return x
@@ -190,10 +193,13 @@ p0 = np.ones(3)  # initial parameter points
 p0[0] = max(y_exp)*1.4
 
 i=0
-SST = np.sum((x_exp-x_exp.mean())**2) # defining total sum of squares
-res_vec = np.zeros((len(model_list)))
-AIC_vec = np.ones((len(model_list)))*100
-R2vec = np.zeros((len(model_list)))
+
+perf = np.zeros((len(model_list_i)))
+AIC = np.ones((len(model_list_i)))*100
+AIC_vec = np.ones((len(model_list_i)))*100
+R2vec = np.zeros((len(model_list_i)))
+R2barvec = np.zeros((len(model_list_i)))
+SST = np.sum((y_exp-y_exp.mean())**2)  # defining total sum of squares
 
 def conf_curve(ind, ind_exp, param, model, dep_points, res, alpha=0.05):
     # X = points for plotting
@@ -218,7 +224,8 @@ def conf_curve(ind, ind_exp, param, model, dep_points, res, alpha=0.05):
     return low, upp
 
 
-for model in model_list:
+for model in model_list_i:
+    path='./Output/OLS_Inverse/'+model
     model_name = model
     p0 = np.ones(3)  # initial parameter points
     # giving initial guesses
@@ -234,20 +241,25 @@ for model in model_list:
         uplow = ([0, -np.inf, -np.inf], np.inf)
 
     result = least_squares(calc_res, p0, method='trf',
-                           jac='2-point', max_nfev=100*len(p0), bounds=uplow)
+                           jac='2-point', max_nfev=100*len(p0), bounds=uplow,loss=loss_fn)
 
     if not result.success:
         # try again with more accurate jacobian and longer max function evals.
         result = least_squares(calc_res, p0, method='trf', jac='3-point',
-                               max_nfev=1000*len(p0)*len(p0), bounds=uplow)
+                               max_nfev=1000*len(p0)*len(p0), bounds=uplow,loss=loss_fn)
 
     # Estimating covariance matrix form the jacobian
     # as H = 2*J^TJ and cov = H^{-1}
-    U, s, Vh = svd(result.jac, full_matrices=False)
-    threshold = 1e-14  # anything below machine error*100 = 0
+    # estimating pcov using method from minpack.py
+    # Do Moore-Penrose inverse discarding zero singular values.
+    _, s, VT = svd(result.jac, full_matrices=False)
+    threshold = np.finfo(float).eps * max(result.jac.shape) * s[0] 
     s = s[s > threshold]
-    Vh = Vh[:s.size]
-    pcov = np.dot(Vh.T / s**2, Vh)
+    VT = VT[:s.size]
+    pcov = np.dot(VT.T / s**2, VT)
+    cost = result.cost * 2
+    s_sq = cost / (y_exp.size - result.x.size)
+    pcov = pcov * s_sq
     perf = (result.cost*2)  # (sum (res^2)*0.5)*2
     
     s2 = perf/y_exp.size
@@ -259,12 +271,16 @@ for model in model_list:
     AIC = AIC + (2*len(result.x)*(len(result.x)+1)) / \
         (x_exp.size-len(result.x)-1)
     AIC_vec[i]=AIC
+    SSR = sum(calc_res(result.x)**2)  # calculating the SSR
+
+    R2vec[i] = 1 - (SSR)/SST
+    R2barvec[i] = 1 - (1-R2vec[i])*(x_exp.size-1) / \
+                (x_exp.size-1-len(result.x))
     res = calc_res(result.x)
     res = sum(res**2)    
-    R2vec[i] = 1- (res)/SST
     i=i+1
     # After indentifying the best AIC the remainder should be scaled: delta AICc = AIC - AICmin.
-
+    # for listing later
     y_points = np.linspace(plot_range[0], plot_range[1], 25)
 
     if (result.success):
@@ -305,21 +321,27 @@ for model in model_list:
         ax.set_xlim([0, None])
         ax.set_ylim([0, None])
         ax.legend(loc='best')
-        fig.savefig('./Output/Inverse/'+model+'.png')
+        fig.savefig(path+'.png')
         plt.close(fig)
+
         # printing out
-        file_out = open('./Output/Inverse/'+model+'_results.txt', 'w')
+        file_out = open(path+'_results.txt', 'w')
         f = file_out
+        d=''
+        e=''
+        ff=''
         file_out.write("Parameters: A, B & C	\n\n")
         file_out.write('a: ' + str(a))
         file_out.write('\nb: ' + str(b))
         file_out.write('\nc: ' + str(c))
-
+        file_out.write('\nd: ' + str(d))
+        if len(result.x) == 6:
+            file_out.write('\ne: ' + str(e))
+            file_out.write('\nf: ' + str(ff))
         file_out.write("\n\nPlotting Data: Predicted \n\n")
-         # file_out.close()
+
         mat = np.matrix([x_points, y_points])
         mat = np.rot90(mat)
-           # with open('./Output/'+model+'_results.txt','a') as f:
         for line in mat:
             np.savetxt(f, line, fmt='%.2f')
 
@@ -327,7 +349,7 @@ for model in model_list:
         mat = np.matrix([x_points, upp])
         mat = np.rot90(mat)
         for line in mat:
-             np.savetxt(f, line, fmt='%.2f')
+            np.savetxt(f, line, fmt='%.2f')
 
         file_out.write("\n\nPlotting Data: Confidence Interval Lower	\n\n")
         mat = np.matrix([x_points, low])
@@ -339,18 +361,29 @@ for model in model_list:
         print('Model: %s 	FAILED. Residual: %d 	AIC: %d ' %
               (model, result.cost, AIC))
 
+# Final organising for outputs
+# delta AIC is more useful than AIC
+AIC_vec = AIC_vec-min(AIC_vec)
 
-file_out = open('./Output/Inverse/Summary.txt', 'w')
-file_out.write('The models given in order of increasing AIC:\n')
-sorted_list = [model_list for _,model_list in sorted(zip(AIC_vec,model_list))]     
-for item in sorted_list:
-        file_out.write("%s,  " % item)
-                                 
+path='./Output/Summary_OLS_Inverse.txt'
 
-file_out.write('\n%s has the lowest AIC of %4.2e\n' %(sorted_list[0],min(AIC_vec)))
+file_out = open(path, 'w')
+file_out.write('Summary of outputs\n')
+file_out.write('Input:	%s\n' % file_name)
+file_out.write('Loss Method:	%s\n\n' % loss_fn)
 
-file_out.write('\n\nThe models given in order of decreasing R2: \n')
-sorted_list = [model_list for _,model_list in sorted(zip(R2vec,model_list),reverse=True)]                                      
-for item in sorted_list:
-        file_out.write("%s,  " % item)
-file_out.write('\n%s has the highest R2vec of %4.2f\n' %(sorted_list[0],max(R2vec)))
+file_out.write('Model results in order of increasing deltaAIC:\n')
+sorted_list = [model_list_i for _,
+               model_list_i in sorted(zip(AIC_vec, model_list_i))]
+sorted_AIC = [AIC_vec for _, AIC_vec in sorted(zip(AIC_vec, AIC_vec))]
+sorted_R2 = [R2vec for _, R2vec in sorted(zip(AIC_vec, R2vec))]
+sorted_R2bar = [R2barvec for _, R2barvec in sorted(zip(AIC_vec, R2barvec))]
+
+file_out.write("%-30s	%4s	%4s	%4s\n" % ('Model', 'AIC', 'R2', 'R2bar'))
+
+for i in range(len(sorted_list)):
+    file_out.write("%-30s	%4.4f	%4.4f	%4.4f\n" %
+                   (sorted_list[i], sorted_AIC[i], sorted_R2[i], sorted_R2bar[i]))
+
+print('Regression with OLS_inverse, with  %5s loss function has finished. Best model is %-30s.'%(loss_fn,sorted_list[0]))
+print('\nSee %s for more detials.' %(path))
