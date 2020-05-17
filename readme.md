@@ -14,6 +14,8 @@ The program can perform three different types of regression:
 OLS should be used if the age estimate is without error, OLS_i should be used if the y value (size, mass, etc.) is without error, and ODR should be used if there is error in both variables.
 
 OLS(_i) can be used with linear or soft l1 loss. Soft l1 is less sensitive to the presence of outliers and can lead to a more robust regression.
+
+One should note that the estimated uncertainty interval of OLS_i can especially become very large if the underlying model predicts an asymptote, without experimental points on this asymptote. In general one should not use any model to estimate information if there is no experimental points near this.
   
 ## How to use
 To use the program simply fill in the necessary information in Input.txt file. One needs to provide the location of the experimental data, the method of regression, and the number of points used in the plotting.

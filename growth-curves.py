@@ -353,11 +353,14 @@ if not (regression_type=='OLS_i'):
 	i = 0
 	perf = np.zeros((len(model_list)))
 	AIC = np.ones((len(model_list)))*100
-	AIC_vec = np.ones((len(model_list)))*100
+	AIC_vec = np.ones((len(model_list)))*np.inf
+	BIC_vec = np.ones((len(model_list)))*np.inf
+	BICc_vec = np.ones((len(model_list)))*np.inf
+	AICc_vec = np.ones((len(model_list)))*np.inf
 	R2vec = np.zeros((len(model_list)))
-	R2barvec = np.zeros((len(model_list)))
 	SST = np.sum((y_exp-y_exp.mean())**2)  # defining total sum of squares
-
+	if regression_type == 'ODR':
+		SST = SST*1./sy_exp2+np.sum((x_exp-x_exp.mean())**2)*1./sx_exp2 # for odr weighted by variances
 
 	x_points = np.linspace(plot_range[0], plot_range[1], plot_points)
 
@@ -450,25 +453,33 @@ if not (regression_type=='OLS_i'):
 				#s = s[s > threshold]
 				#Vh = Vh[:s.size]
 				#pcov = np.dot(Vh.T / s**2, Vh)
+				num_param = len(fit_param) +1 # assumed variance y error
+				SSR = sum(calc_res(fit_param)**2)  # calculating the SSR
 			else:
 				sd_beta=unp.uarray(fit_param,myoutput.sd_beta)
+				num_param = len(fit_param) +2 # assumed variances in x and y errors
+				SSR = myoutput.sum_square # in both x and y
 			perf = (sum(calc_res(fit_param)**2))  # (sum (res^2)*0.5)*2
 			s2 = perf/x_exp.size
 			# leaving out np.log(2*pi)
 			logL = -(x_exp.size)/2*(np.log(2*pi)+np.log(s2)+1)
-			AIC = 2*len(fit_param)-2*logL
-			AIC = AIC + (2*len(fit_param)*(len(fit_param)+1)) / \
-				(x_exp.size-len(fit_param)-1)
+			
+			# note this is the corrected ICs
+			AIC = 2*num_param-2*logL
+			AICc = AIC + (2*num_param*(num_param+1)) / \
+				(x_exp.size-num_param-1)
 			# for listing later
 			AIC_vec[i] = AIC
-			SSR = sum(calc_res(fit_param)**2)  # calculating the SSR
-
+			AICc_vec[i] = AICc
+			BICc = num_param*np.log(x_exp.size)*(x_exp.size)/(x_exp.size-num_param-1) -2*logL
+			BIC = num_param*np.log(x_exp.size) -2*logL
+			BIC_vec[i] = BIC
+			BICc_vec[i] = BICc
 			R2vec[i] = 1 - (SSR)/SST
-			R2barvec[i] = 1 - (1-R2vec[i])*(x_exp.size-1) / \
-				(x_exp.size-1-len(fit_param))
+
 			i = i+1
-			print('Model: %s AIC: %d R2 %4.2f, R2bar %4.2f' %
-				(model, AIC, R2vec[i-1], R2barvec[i-1]))
+			print('Model: %s AIC: %d R2 %4.2f, ' %
+				(model, AIC, R2vec[i-1]))
 			certain = True
 			y_pred = model_y(fit_param, x_exp)
 			certain = False
@@ -560,7 +571,7 @@ if not (regression_type=='OLS_i'):
 			print('Model: %s 	Residual: Convergence Failed' % (model))
 			AIC_vec[i] = np.inf
 			R2vec[i] = float('nan')
-			R2barvec[i] = float('nan')
+		
 			i=i+1
 			fig = plt.figure()
 			fig.savefig(path+'.png') # to produce blank figure
@@ -722,9 +733,11 @@ else:
 
 	perf = np.zeros((len(model_list_i)))
 	AIC = np.ones((len(model_list_i)))*100
-	AIC_vec = np.ones((len(model_list_i)))*100
+	AIC_vec = np.ones((len(model_list_i)))*np.inf
+	BIC_vec = np.ones((len(model_list_i)))*np.inf
+	BICc_vec = np.ones((len(model_list_i)))*np.inf
+	AICc_vec = np.ones((len(model_list_i)))*np.inf
 	R2vec = np.zeros((len(model_list_i)))
-	R2barvec = np.zeros((len(model_list_i)))
 	SST = np.sum((y_exp-y_exp.mean())**2)  # defining total sum of squares
 
 	def conf_curve(ind, ind_exp, param, model, dep_points, res, alpha=0.05):
@@ -805,16 +818,20 @@ else:
 
 		# computing information criterion
 		# leaving out np.log(2*pi)
+		num_param = len(result.x)+1
 		logL = -(x_exp.size)/2*(np.log(2*pi)+np.log(s2)+1)
-		AIC = 2*len(result.x)-2*logL
-		AIC = AIC + (2*len(result.x)*(len(result.x)+1)) / \
-			(x_exp.size-len(result.x)-1)
+		AIC = 2*num_param-2*logL
+		AICc = AIC + (2*num_param*(num_param+1)) / \
+			(x_exp.size-num_param-1)
+		AICc_vec[i]=AICc
 		AIC_vec[i]=AIC
 		SSR = sum(calc_res(result.x)**2)  # calculating the SSR
-
+		BICc = num_param*np.log(x_exp.size)*(x_exp.size)/(x_exp.size-num_param-1) -2*logL
+		BIC = num_param*np.log(x_exp.size)-2*logL
+		BICc_vec[i] = BICc
+		BIC_vec[i] = BIC
 		R2vec[i] = 1 - (SSR)/SST
-		R2barvec[i] = 1 - (1-R2vec[i])*(x_exp.size-1) / \
-					(x_exp.size-1-len(result.x))
+
 		res = calc_res(result.x)
 		res = sum(res**2)    
 		i=i+1
@@ -842,8 +859,9 @@ else:
 			
 			# it is desirable to specify ages in plotting.
 			# so use specified x values to find the exact y values
-			# y_points = eval(model_name[0:-2])(result.x, x1_points)
-			y_points = np.linspace(min(y_exp), max(y_exp), plot_points)
+			
+			y_points = eval(model_name[0:-2])(result.x, x1_points)
+			#y_points = np.linspace(min(y_exp), max(y_exp), plot_points)
 			certain = False
 			# then calculate the uncertain x values
 			
@@ -872,9 +890,10 @@ else:
 			#		if lowx[k-1]>lowx[k]:
 			#			lowx[k]=lowx[k-1]
 			#			low_y_points[k]=low_y_points[k-1]
-				
-			ax.plot(x_points- 1.96*std, y_points ,color='C1')
-			ax.plot(x_points+ 1.96*std, y_points ,color='C1')
+			xconf_low = x_points- 1.96*std
+			xconf_high = x_points+ 1.96*std
+			ax.plot(xconf_low, y_points ,color='C1')
+			ax.plot(xconf_high, y_points ,color='C1')
 			# uncertainty lines (95% confidence)
 			ax.set_xlim([plot_range[0], plot_range[1]+1])
 			ax.set_ylim([0, None])
@@ -904,13 +923,13 @@ else:
 				np.savetxt(f, line, fmt='%.2f')
 
 			file_out.write("\n\nPlotting Data: Confidence Interval Upper	\n\n")
-			mat = np.matrix([x_points, upp])
+			mat = np.matrix([xconf_high,y_points ])
 			mat = np.rot90(mat)
 			for line in mat:
 				np.savetxt(f, line, fmt='%.2f')
 
 			file_out.write("\n\nPlotting Data: Confidence Interval Lower	\n\n")
-			mat = np.matrix([x_points, low])
+			mat = np.matrix([xconf_low, y_points])
 			mat = np.rot90(mat)
 			for line in mat:
 				np.savetxt(f, line, fmt='%.2f')
@@ -923,6 +942,10 @@ else:
 # Final organising for outputs
 # delta AIC is more useful than AIC
 AIC_vec = AIC_vec-min(AIC_vec)
+BIC_vec = BIC_vec - min(BIC_vec)
+
+AICc_vec = AICc_vec-min(AICc_vec)
+BICc_vec = BICc_vec - min(BICc_vec)
 if regression_type=='OLS':
 	path='./Output/Summary_OLS.txt'
 elif regression_type=='ODR':
@@ -935,17 +958,20 @@ file_out.write('Summary of outputs\n')
 file_out.write('Input:	%s\n' % file_name)
 file_out.write('Loss Method:	%s\n\n' % loss_fn)
 
-file_out.write('Model results in order of increasing deltaAIC:\n')
+file_out.write('Model results in order of increasing AIC. Note that all the ICs have been normalised to their minimum.\n')
 sorted_list = [model_list_print for _,
 			model_list_print in sorted(zip(AIC_vec, model_list_print))]
 sorted_AIC = [AIC_vec for _, AIC_vec in sorted(zip(AIC_vec, AIC_vec))]
-sorted_R2 = [R2vec for _, R2vec in sorted(zip(AIC_vec, R2vec))]
-sorted_R2bar = [R2barvec for _, R2barvec in sorted(zip(AIC_vec, R2barvec))]
+sorted_AICc = [AICc_vec for _, AICc_vec in sorted(zip(AIC_vec, AICc_vec))]
 
-file_out.write("%-30s	%4s	%4s	%4s\n" % ('Model', 'AIC', 'R2', 'R2bar'))
+sorted_R2 = [R2vec for _, R2vec in sorted(zip(AIC_vec, R2vec))]
+sorted_BIC = [BIC_vec for _, BIC_vec in sorted(zip(AIC_vec, BIC_vec))]
+sorted_BICc = [BICc_vec for _, BICc_vec in sorted(zip(AIC_vec, BICc_vec))]
+
+file_out.write("%-30s %8s %8s %8s %8s %8s\n" % ('Model', 'AIC','AICc', 'R2', 'BIC','BICc'))
 
 for i in range(len(sorted_list)):
-	file_out.write("%-30s	%4.4f	%4.4f	%4.4f\n" %
-				(sorted_list[i], sorted_AIC[i], sorted_R2[i], sorted_R2bar[i]))
+	file_out.write("%-30s	%8.4f	%8.4f %8.4f %8.4f %8.4f  \n" %
+				(sorted_list[i], sorted_AIC[i],sorted_AICc[i], sorted_R2[i],sorted_BIC[i],sorted_BICc[i]))
 print('Regression with %s &  %s loss function has finished. Best model is %s.'%(regression_type,loss_fn,sorted_list[0]))
 print('\nSee %s for more detials.' %(path))

@@ -1,5 +1,5 @@
 Male Kangaroo Data
-0.5     8
+0.5     7
 
 0.91	8.4
 0.91	6.7
