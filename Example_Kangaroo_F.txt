@@ -1,4 +1,4 @@
-Arnold Kangaroo FEMALE  data				
+Kangaroo Data. Arnold, G. W., et al. "Population ecology of western grey kangaroos in a remnant of wandoo woodland at Baker's Hill, southern Western Australia." Wildlife Research 18.5 (1991): 561-575.			
 0.5  12				
 
 1.3	6.2			
