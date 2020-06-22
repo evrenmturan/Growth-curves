@@ -82,7 +82,7 @@ model_list = ['Gompertz', 'Quadratic', 'logistic', 'vonBertalanffy', 'monomolecu
 				  
 model_list_i = ['Gompertz_i', 'monomolecular_i', 'vonBertalanffy_i', 'HeLegendre_i', 'Korf_i', 'logistic_i', 'MorganMercerFlodin_i', 'Weibull_i', 'MichaelisMenten_i', 'NegativeExponential_i','NegativeExponential2_i',
               'Power_i', 'Power2_i', 'ChapmanRichards_i','HeLegendre2_i','ExtremeValue_i', \
-				  'Levakovic2_i','Levakovic_i','linear_i']
+				  'Levakovic_i','linear_i','Levakovic2_i']
 if regression_type=='OLS_i':
 	model_list_print = model_list_i
 else:
@@ -230,11 +230,11 @@ def HeLegendre(param, xp):
 
 def ExtremeValue(param, xp):
 	if certain:
-		y_pred = -np.log(param[2]+param[1]*xp)
-		y_pred = param[0]*(1+np.exp(y_pred))
+		y_pred = -np.exp(param[2]+param[1]*xp)
+		y_pred = param[0]*(1-np.exp(y_pred))
 	else:
-		y_pred = -unp.log(param[2]+param[1]*xp)
-		y_pred = param[0]*(1+unp.exp(y_pred))
+		y_pred = -unp.exp(param[2]+param[1]*xp)
+		y_pred = param[0]*(1-unp.exp(y_pred))
 	return y_pred
 
 
@@ -863,10 +863,11 @@ else:
 			certain = True
 			x_pred = model_x(result.x, y_exp)
 			res = calc_res(result.x)
+			uparam = unc.correlated_values(result.x, pcov)
 			if len(result.x)==3:
-				a, b, c = unc.correlated_values(result.x, pcov)
+				a, b, c = uparam
 			elif len(result.x)==2:
-				a, b = unc.correlated_values(result.x, pcov)
+				a, b = uparam
 				c = ''
 			print('Uncertainty')
 			print('a: ' + str(a))
@@ -874,20 +875,13 @@ else:
 			print('c: ' + str(c))
 			
 			
-			
 			# it is desirable to specify ages in plotting.
-			# so use specified x values to find the exact y values
-			if(model_name=='NegativeExponential_i'):
-				aa=1
-			y_points = eval(model_name[0:-2])(result.x, x1_points)
-			#y_points = np.linspace(min(y_exp), max(y_exp), plot_points)
+
 			certain = False
-			# then calculate the uncertain x values
-			
-			
-			x_unc = model_x(np.array([a, b, c]), y_points)
-			x_points = unp.nominal_values(x_unc)
-			std = unp.std_devs(x_unc)
+			y_unc = eval(model_name[0:-2])(uparam, x1_points)
+			x_points=x1_points
+			y_points = unp.nominal_values(y_unc)
+			std = unp.std_devs(y_unc)
 
 			certain = True
 			low, upp = conf_curve(y_points, y_exp, result.x,
@@ -899,20 +893,11 @@ else:
 			ax.plot(low, y_points, 'k--', label='95% Prediction band')
 			ax.plot(upp, y_points, 'k--')
 			ax.plot(x_exp, y_exp, 'bo', label='Experimental points')
-			#ax.fill_between(x_points, y_points - 1.96*std,y_points + 1.96*std,
-			#label='95% confidence band',alpha=0.2,color='C1')
-			# need to find the point at which std rapidly increases.
-			#lowx = x_points- 1.96*std
-			#low_y_points = y_points
-			#for k in range(len(lowx)):
-			#	if not k==0:
-			#		if lowx[k-1]>lowx[k]:
-			#			lowx[k]=lowx[k-1]
-			#			low_y_points[k]=low_y_points[k-1]
-			xconf_low = x_points- 1.96*std
-			xconf_high = x_points+ 1.96*std
-			ax.plot(xconf_low, y_points ,color='C1')
-			ax.plot(xconf_high, y_points ,color='C1')
+			ax.fill_between(x_points, y_points - 1.96*std,y_points + 1.96*std,
+			label='95% confidence band',alpha=0.2,color='C1')
+
+			ax.plot(x_points, y_points - 1.96*std,color='C1')
+			ax.plot(x_points, y_points + 1.96*std,color='C1')
 			# uncertainty lines (95% confidence)
 			ax.set_xlim([plot_range[0], plot_range[1]+1])
 			ax.set_ylim([0, None])
@@ -945,13 +930,13 @@ else:
 				np.savetxt(f, line, fmt='%.2f')
 
 			file_out.write("\n\nPlotting Data: Confidence Interval Upper	\n\n")
-			mat = np.matrix([xconf_high,y_points ])
+			mat = np.matrix([x_points,y_points + 1.96*std ])
 			mat = np.rot90(mat)
 			for line in mat:
 				np.savetxt(f, line, fmt='%.2f')
 
 			file_out.write("\n\nPlotting Data: Confidence Interval Lower	\n\n")
-			mat = np.matrix([xconf_low, y_points])
+			mat = np.matrix([x_points,y_points - 1.96*std ])
 			mat = np.rot90(mat)
 			for line in mat:
 				np.savetxt(f, line, fmt='%.2f')
