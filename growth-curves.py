@@ -78,7 +78,7 @@ certain = True
 
 model_list = ['Gompertz', 'Quadratic', 'logistic', 'vonBertalanffy', 'monomolecular', 'ChapmanRichards', 'HeLegendre', 'Korf', 'Weibull', 'MichaelisMenten', 'NegativeExponential','NegativeExponential2',
               'Power', 'Power2','MorganMercerFlodin', 'UnifiedRichards4', 'logistic_2', 'linear', 'vonBertalanffy2','HeLegendre2', \
-				  'Levakovic2','Levakovic'] 
+				  'Levakovic2','Levakovic','ExtremeValue'] 
 				  
 model_list_i = ['Gompertz_i', 'monomolecular_i', 'vonBertalanffy_i', 'HeLegendre_i', 'Korf_i', 'logistic_i', 'MorganMercerFlodin_i', 'Weibull_i', 'MichaelisMenten_i', 'NegativeExponential_i','NegativeExponential2_i',
               'Power_i', 'Power2_i', 'ChapmanRichards_i','HeLegendre2_i','ExtremeValue_i', \

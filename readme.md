@@ -1,7 +1,7 @@
 # Growth-curves
 _growth-curves.py_ automatically tests various growth curves against provided experimental data with a selection of different regression options. The outputs of the program include:
 
- - A summary of results, including a list of models tested with their AIC, R2 and adjusted R2 values
+ - A summary of results, including a list of models tested with their AIC, BIC and corrected forms of these
  - Plots of each model
  - Data for each model that will allow the plots to be reproduced
 
@@ -18,14 +18,13 @@ OLS(_i) can be used with linear or soft l1 loss. Soft l1 is less sensitive to th
 One should note that the estimated uncertainty interval of OLS_i can especially become very large if the underlying model predicts an asymptote, without experimental points on this asymptote. In general one should not use any model to estimate information if there is no experimental points near this.
   
 ## How to use
-To use the program simply fill in the necessary information in Input.txt file. One needs to provide the location of the experimental data, the method of regression, and the number of points used in the plotting.
-The experimental data must be provided in a text file (with . as the decimal separator). 
+To use the program simply fill in the necessary information in Input.txt file and provide the experimental data in a text file (with . as the decimal separator). In Input.txt one needs to provide the location of the experimental data, the method of regression, and the number of points used in the plotting.
 
 The first line in the file should be the data title, followed by the range desired in the final plots, followed by a blank line and the data in column format. The first column should be age and the second column should be the growth parameter.
 
 ## Available Models
 
-A wide range of models are provided for fitting. Note that some models can issues in their fit, and may result in errors. If a model is fitted and gives a parameter with a uncertainty, e.g. c = (0 +- 4)e6, this means that this parameter is fitted extremely loosely, and a more reduced form of the model may have been appropriate. Use of such a  model is cautioned.
+A wide range of models are provided for fitting. Note that some models can experience issues in the fitting fit, and may give errors. E.g. a model with a parameter with very large uncertainty, e.g. c = (0 +- 4)e6. It is typically clear if the fitting worked correctly, especially upon examination of the figures.
 
 The list of models available follows. Note that some models become extremely sensitive when inverted and are not used in the inverted OLS problem. If number of parameters are not stated in the below, then assume this is a 3 parameter form.
 ### OLS and ODR
@@ -52,6 +51,7 @@ The list of models available follows. Note that some models become extremely sen
  - He Legendre (2 parameters)
  - Levakovic (2 parameters)
  - Power (2 parameters)
+ - Extreme Value
  
  
 ### OLS inverse
