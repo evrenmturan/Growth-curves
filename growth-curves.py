@@ -76,11 +76,11 @@ certain = True
 
 # Models
 
-model_list = ['Gompertz', 'Quadratic', 'logistic', 'vonBertalanffy', 'monomolecular', 'ChapmanRichards', 'HeLegendre', 'Korf', 'Weibull', 'MichaelisMenten', 'NegativeExponential',
+model_list = ['Gompertz', 'Quadratic', 'logistic', 'vonBertalanffy', 'monomolecular', 'ChapmanRichards', 'HeLegendre', 'Korf', 'Weibull', 'MichaelisMenten', 'NegativeExponential','NegativeExponential2',
               'Power', 'Power2','MorganMercerFlodin', 'UnifiedRichards4', 'logistic_2', 'linear', 'vonBertalanffy2','HeLegendre2', \
 				  'Levakovic2','Levakovic'] 
 				  
-model_list_i = ['Gompertz_i', 'monomolecular_i', 'vonBertalanffy_i', 'HeLegendre_i', 'Korf_i', 'logistic_i', 'MorganMercerFlodin_i', 'Weibull_i', 'MichaelisMenten_i', 'NegativeExponential_i',
+model_list_i = ['Gompertz_i', 'monomolecular_i', 'vonBertalanffy_i', 'HeLegendre_i', 'Korf_i', 'logistic_i', 'MorganMercerFlodin_i', 'Weibull_i', 'MichaelisMenten_i', 'NegativeExponential_i','NegativeExponential2_i',
               'Power_i', 'Power2_i', 'ChapmanRichards_i','HeLegendre2_i','ExtremeValue_i', \
 				  'Levakovic2_i','Levakovic_i','linear_i']
 if regression_type=='OLS_i':
@@ -88,6 +88,12 @@ if regression_type=='OLS_i':
 else:
 	model_list_print = model_list
 # forward direction functions are required for plotting.
+def NegativeExponential2(param,xp):
+	if certain:
+		y_pred = param[0]*(1-np.exp(-param[1]*xp))
+	else:
+		y_pred = param[0]*(1-unp.exp(-param[1]*xp))
+	return y_pred
 def Power2(param,xp):
 		y_pred = (param[0]*xp) ** param[1]
 		return y_pred
@@ -395,7 +401,7 @@ if not (regression_type=='OLS_i'):
 
 			
 		if(model_name == 'logistic_2' or model_name == 'vonBertalanffy2' or \
-			model_name=='HeLegendre2' or model_name =='Levakovic2' or model_name =='Power2'):
+			model_name=='HeLegendre2' or model_name =='Levakovic2' or model_name =='Power2' or model_name =='NegativeExponential2'):
 			x0 = np.ones(2)
 			uplow = ([0, 0], np.inf)
 		if (model_name == 'linear'):
@@ -504,7 +510,7 @@ if not (regression_type=='OLS_i'):
 			
 			print('Uncertainty')
 
-			print('a: ' + str(a))
+			print('a: {:0.2f}'.format(a))
 			print('b: ' + str(b))
 			print('c: ' + str(c))
 			print('d: ' + str(d))
@@ -515,7 +521,8 @@ if not (regression_type=='OLS_i'):
 
 			y_points = unp.nominal_values(y_unc)
 			std = unp.std_devs(y_unc)
-
+			if model_name =='logistic':
+				aaa=1
 			certain = True
 			low, upp = conf_curve(x_points, x_exp, y_exp,
 								fit_param, model, y_pred, y_points, alpha=0.05)
@@ -541,13 +548,16 @@ if not (regression_type=='OLS_i'):
 			file_out = open(path+'_results.txt', 'w')
 			f = file_out
 			file_out.write("Parameters: A, B & C	\n\n")
-			file_out.write('a: ' + str(a))
-			file_out.write('\nb: ' + str(b))
-			file_out.write('\nc: ' + str(c))
-			file_out.write('\nd: ' + str(d))
+			
+			file_out.write('a: {:0.2f}'.format(a))
+			file_out.write('\nb: {:0.2f}'.format(b))
+			if len(fit_param) >= 3:
+				file_out.write('\nc: {:0.2f}'.format(c))
+			if len(fit_param) >= 4:
+				file_out.write('\nd: {:0.2f}'.format(d))
 			if len(fit_param) == 6:
-				file_out.write('\ne: ' + str(e))
-				file_out.write('\nf: ' + str(ff))
+				file_out.write('\ne: {:0.2f}'.format(e))
+				file_out.write('\nf: {:0.2f}'.format(f))
 			file_out.write("\n\nPlotting Data: Predicted \n\n")
 
 			mat = np.matrix([x_points, y_points])
@@ -603,12 +613,17 @@ else:
 		x = (y/param[0])**(1/param[1])
 		return x
 
-
+	def NegativeExponential2_i(param,y):
+		if certain:
+			x = -np.log(1-y/param[0])/param[1]
+		else:
+			x = -unp.log(1-y/param[0])/param[1]
+		return x
 	def NegativeExponential_i(param, y):
 		if certain:
-			x = (param[1]*param[2] - np.log(-(-param[0]+y)/param[0]))/param[2]
+			x = (param[1]*param[2] - np.log(-(-param[0]+y)/param[0]))/param[1]
 		else:
-			x = (param[1]*param[2] - unp.log(-(-param[0]+y)/param[0]))/param[2]
+			x = (param[1]*param[2] - unp.log(-(-param[0]+y)/param[0]))/param[1]
 		return x
 
 
@@ -786,12 +801,15 @@ else:
 		if (model == 'linear_i'):
 			uplow = ([0, -np.inf], np.inf)
 			p0 = [1, 1]
-		if (model =='HeLegendre2_i'):
+		if (model =='HeLegendre2_i' ):
 			uplow = ([max(y_exp),-np.inf],np.inf)
 			p0 = [max(y_exp)*1.1,1]
 		if (model == 'Levakovic2_i'):
 			uplow = ([max(y_exp),0],np.inf)
 			p0 = [max(y_exp)*1.1,1]
+		if (model =='NegativeExponential2_i'):
+			uplow = ([max(y_exp),0],np.inf)
+			p0 = [max(y_exp)*1.1,0.1]
 		result = least_squares(calc_res, p0, method='trf',
 							jac='2-point', max_nfev=100*len(p0), bounds=uplow,loss=loss_fn)
 
@@ -859,7 +877,8 @@ else:
 			
 			# it is desirable to specify ages in plotting.
 			# so use specified x values to find the exact y values
-			
+			if(model_name=='NegativeExponential_i'):
+				aa=1
 			y_points = eval(model_name[0:-2])(result.x, x1_points)
 			#y_points = np.linspace(min(y_exp), max(y_exp), plot_points)
 			certain = False
@@ -908,13 +927,16 @@ else:
 			e=''
 			ff=''
 			file_out.write("Parameters: A, B & C	\n\n")
-			file_out.write('a: ' + str(a))
-			file_out.write('\nb: ' + str(b))
-			file_out.write('\nc: ' + str(c))
-			file_out.write('\nd: ' + str(d))
+			file_out.write('a: {:0.2f}'.format(a))
+			file_out.write('\nb: {:0.2f}'.format(b))
+			if len(result.x) >= 3:
+				file_out.write('\nc: {:0.2f}'.format(c))
+			if len(result.x) >= 4:
+				file_out.write('\nd: {:0.2f}'.format(d))
 			if len(result.x) == 6:
-				file_out.write('\ne: ' + str(e))
-				file_out.write('\nf: ' + str(ff))
+				file_out.write('\ne: {:0.2f}'.format(e))
+				file_out.write('\nf: {:0.2f}'.format(ff))
+
 			file_out.write("\n\nPlotting Data: Predicted \n\n")
 
 			mat = np.matrix([x_points, y_points])
