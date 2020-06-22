@@ -24,7 +24,7 @@ The first line in the file should be the data title, followed by the range desir
 
 ## Available Models
 
-A wide range of models are provided for fitting. Note that some models can experience issues in the fitting fit, and may give errors. E.g. a model with a parameter with very large uncertainty, e.g. c = (0 +- 4)e6. It is typically clear if the fitting worked correctly, especially upon examination of the figures.
+A wide range of models are provided for fitting. See the file Function List.pdf for the functions with mathematical expressions. Note that some models can experience issues in the fitting fit, and may give errors. E.g. a model with a parameter with very large uncertainty, e.g. c = (0 +- 4)e6. It is typically clear if the fitting worked correctly, especially upon examination of the figures.
 
 The list of models available follows. Note that some models become extremely sensitive when inverted and are not used in the inverted OLS problem. If number of parameters are not stated in the below, then assume this is a 3 parameter form.
 ### OLS and ODR
