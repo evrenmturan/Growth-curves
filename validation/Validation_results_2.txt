@@ -1,0 +1,27 @@
+Results from Myhrvold 2013, Revisiting the Estimation of Dinosaur Growth Rates
+
+Reported
+=====================
+Best Fit: Linear
+A = 2.52
+B = 6.95
+
+Second Best Fit: Power (2)
+A = 5.892
+B = 0.749
+
+Calculated
+=====================
+Best Fit: Linear
+a: 2.52+/-0.17
+b: 6.9+/-1.5
+
+Second Best Fit: Power (2)
+a: 5.9+/-0.8
+b: 0.74+/-0.06
+
+
+=> Same models are identified as best and second best by AICc, same parameters are estimated (within the uncertainty bounds reported). Note that uncertainty estimates from Myhrvold (2013) were not reported.
+
+
+

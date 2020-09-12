@@ -1,0 +1,22 @@
+Results from J.G. García-Muñiz et al. (2019)
+
+Results from literature
+========
+
+Models chosen by AIC = 
+Michaelis-Menten, Richards, Von Bertalanffy, Weibull=Brody=Gompertz, Logistic
+
+Calculated results
+======================
+
+Models chosen by AIC =
+
+Michaelis-Menten, ChapmanRichards, Weibull, von Bertalanffy, Gompertz, Logistic
+
+Note that Models not present in both of the works were excluded from the above lists. 
+
+=> The nearly the same ranking of models were given, apart from Weibull and the von Bertalanffy model which were switched. This difference may be due to the different parameterisations of the models that were used in cited work and the present code. When using the full model list of this work the best model is the monomolecular/negative exponential model.
+
+
+
+

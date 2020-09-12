@@ -20,6 +20,11 @@ To use the program simply fill in the necessary information in Input.txt file an
 
 The first line in the file should be the data title, followed by the range desired in the final plots, followed by a blank line and the data in column format. The first column should be age and the second column should be the growth parameter.
 
+Some useful literature is available in the Literature folder, this can be removed if desired.
+
+## Validation
+The code has been compared to various published results. The validation folder contains some comparisons of literature parameter estimates and model choices and ones determined by this code. 
+
 ## Available Models
 
 A wide range of models are provided for fitting. See the file Function List.pdf for the functions with mathematical expressions. Note that some models can experience issues in the fitting fit, and may give errors. E.g. a model with a parameter with very large uncertainty, e.g. c = (0 +- 4)e6. It is typically clear if the fitting worked correctly, especially upon examination of the figures.
