@@ -1,5 +1,5 @@
-# Growth-curves
-_growth-curves.py_ automatically tests various growth curves against provided experimental data with a selection of different regression options. The outputs of the program include:
+# Growth-curves: regression and ranking of various growth curves against experimental data 
+This software automatically tests various growth curves against provided experimental data with a selection of different regression options. The outputs of the program include:
 
  - A summary of results, including a list of models tested with their AIC, BIC and corrected forms of these
  - Plots of each model
@@ -11,6 +11,7 @@ The program can perform three different types of regression:
  - Inverted OLS (OLSi)
  - Orthogonal Distance Regression (ODR)
 
+The choice of these options depend on whether the age or growth (y-variable, i.e. size, or mass, etc.) has the largest associated uncertainty/error. Examples of papers on why this is an important decision to make, and the influence of this decision are: Kaufmann (1981) and Myhrvold (2013).
 OLS should be used if the age estimate is without error, OLSi should be used if the y value (size, mass, etc.) is without error, and ODR should be used if there is error in both variables.
 
 OLS(i) can be used with linear or soft l1 loss. Soft l1 is less sensitive to the presence of outliers and can lead to a more robust regression.
