@@ -1,0 +1,1912 @@
+% $ biblatex auxiliary file $
+% $ biblatex bbl format version 3.1 $
+% Do not modify the above lines!
+%
+% This is an auxiliary file used by the 'biblatex' package.
+% This file may safely be deleted. It will be recreated by
+% biber as required.
+%
+\begingroup
+\makeatletter
+\@ifundefined{ver@biblatex.sty}
+  {\@latex@error
+     {Missing 'biblatex' package}
+     {The bibliography requires the 'biblatex' package.}
+      \aftergroup\endinput}
+  {}
+\endgroup
+
+
+\refsection{0}
+  \datalist[entry]{nyt/global//global/global}
+    \entry{Akaike1974}{article}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=71ea86082a80cba140f9ff16828ad082}{%
+           family={Akaike},
+           familyi={A\bibinitperiod},
+           given={H.},
+           giveni={H\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{71ea86082a80cba140f9ff16828ad082}
+      \strng{fullhash}{71ea86082a80cba140f9ff16828ad082}
+      \strng{bibnamehash}{71ea86082a80cba140f9ff16828ad082}
+      \strng{authorbibnamehash}{71ea86082a80cba140f9ff16828ad082}
+      \strng{authornamehash}{71ea86082a80cba140f9ff16828ad082}
+      \strng{authorfullhash}{71ea86082a80cba140f9ff16828ad082}
+      \field{sortinit}{A}
+      \field{sortinithash}{a3dcedd53b04d1adfd5ac303ecd5e6fa}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{year}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{issn}{0018-9286}
+      \field{journaltitle}{IEEE Transactions on Automatic Control}
+      \field{month}{12}
+      \field{number}{6}
+      \field{title}{{A new look at the statistical model identification}}
+      \field{volume}{19}
+      \field{year}{1974}
+      \field{pages}{716\bibrangedash 723}
+      \range{pages}{8}
+      \verb{doi}
+      \verb 10.1109/TAC.1974.1100705
+      \endverb
+      \verb{urlraw}
+      \verb http://ieeexplore.ieee.org/document/1100705/
+      \endverb
+      \verb{url}
+      \verb http://ieeexplore.ieee.org/document/1100705/
+      \endverb
+    \endentry
+    \entry{Araujo2012}{article}{}
+      \name{author}{7}{}{%
+        {{un=0,uniquepart=base,hash=d7adbf987e0ec53d6e9d4f64a22721df}{%
+           family={Ara{ú}jo},
+           familyi={A\bibinitperiod},
+           given={Ronyere\bibnamedelima Oleg{á}rio},
+           giveni={R\bibinitperiod\bibinitdelim O\bibinitperiod},
+           givenun=0,
+           prefix={de},
+           prefixi={d\bibinitperiod},
+           prefixun=0}}%
+        {{un=0,uniquepart=base,hash=876ab168e494d90717b5186305be86b6}{%
+           family={Marcondes},
+           familyi={M\bibinitperiod},
+           given={Cintia\bibnamedelima Righetti},
+           giveni={C\bibinitperiod\bibinitdelim R\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=2d6c8eb5ddda472ff71155ac0af9803a}{%
+           family={Dam{é}},
+           familyi={D\bibinitperiod},
+           given={Maria\bibnamedelimb Cec{í}lia\bibnamedelima Florisbal},
+           giveni={M\bibinitperiod\bibinitdelim C\bibinitperiod\bibinitdelim F\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=298860945c26553a700014a024c2135f}{%
+           family={Garnero},
+           familyi={G\bibinitperiod},
+           given={Anal{í}a\bibnamedelimb del\bibnamedelima Valle},
+           giveni={A\bibinitperiod\bibinitdelim d\bibinitperiod\bibinitdelim V\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=f9c6a5552b9fd37a5bc524849c6a886d}{%
+           family={Gunski},
+           familyi={G\bibinitperiod},
+           given={Ricardo\bibnamedelima Jos{é}},
+           giveni={R\bibinitperiod\bibinitdelim J\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=95c3fd9f94768991b747fe8bae025e61}{%
+           family={Everling},
+           familyi={E\bibinitperiod},
+           given={Dion{é}ia\bibnamedelima Magda},
+           giveni={D\bibinitperiod\bibinitdelim M\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=7f3986f7f176aa3426ae5946aceea4ec}{%
+           family={Rorato},
+           familyi={R\bibinitperiod},
+           given={Paulo\bibnamedelimb Roberto\bibnamedelima Nogara},
+           giveni={P\bibinitperiod\bibinitdelim R\bibinitperiod\bibinitdelim N\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{4e18cf85af628c93c74235aca5c4161c}
+      \strng{fullhash}{b1f514f6fa2cbd955c595ee6df4010c9}
+      \strng{bibnamehash}{4e18cf85af628c93c74235aca5c4161c}
+      \strng{authorbibnamehash}{4e18cf85af628c93c74235aca5c4161c}
+      \strng{authornamehash}{4e18cf85af628c93c74235aca5c4161c}
+      \strng{authorfullhash}{b1f514f6fa2cbd955c595ee6df4010c9}
+      \field{sortinit}{A}
+      \field{sortinithash}{a3dcedd53b04d1adfd5ac303ecd5e6fa}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{year}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{With the objective of to adjust nonlinear models for the growth curves for a buffaloes herd raised in floodable lands in Rio Grande do Sul state, monthly records measured from birth to two years-old of 64 males and 63 females born between 1982 and 1989 were used. The models used were: Von Bertalanffy, Brody, Gompertz and Logistic. The parameters were estimated by NLIN procedure and the criteria used to evaluate the adjustment given by the models were: asymptotic standard deviation; coefficient of determination; average absolute deviation of residues and asymptotic index. Von Bertalanffy and Brody models overestimated the male asymptotic weight (A) in 15.9 and 171.3kg, respectively, and the Gompertz and Logistic models underestimated it in 4.5 and 13.4kg, respectively. For females, the Logistic model underestimated the asymptotic weight (-2.09kg), and Gompertz, Von Bertalanffy and Brody overestimated this parameter in 8.04, 17.7, and 280.33kg, respectively. The biggest average deviation was estimated by Brody model for both sexes, characterizing the biggest index. Considering the criteria, it is recommended the Gompertz and Logistic models for adjust females and males Murrah buffaloes breed growth curves.}
+      \field{issn}{0103-8478}
+      \field{journaltitle}{Ci{ê}ncia Rural}
+      \field{month}{3}
+      \field{number}{3}
+      \field{title}{{Classical nonlinear models to describe the growth curve for Murrah buffalo breed}}
+      \field{volume}{42}
+      \field{year}{2012}
+      \field{pages}{520\bibrangedash 525}
+      \range{pages}{6}
+      \verb{doi}
+      \verb 10.1590/S0103-84782012000300022
+      \endverb
+      \verb{urlraw}
+      \verb http://www.scielo.br/scielo.php?script=sci{\_}arttext{\&}pid=S0103-84782012000300022{\&}lng=en{\&}tlng=en
+      \endverb
+      \verb{url}
+      \verb http://www.scielo.br/scielo.php?script=sci%7B%5C_%7Darttext%7B%5C&%7Dpid=S0103-84782012000300022%7B%5C&%7Dlng=en%7B%5C&%7Dtlng=en
+      \endverb
+    \endentry
+    \entry{Bathaei1998}{article}{}
+      \name{author}{2}{}{%
+        {{un=0,uniquepart=base,hash=753a3ea22220dfe2ef15d90b274b0013}{%
+           family={Bathaei},
+           familyi={B\bibinitperiod},
+           given={S.Saeid},
+           giveni={S\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=eb63327667bfeb9da715ffe4f2945989}{%
+           family={Leroy},
+           familyi={L\bibinitperiod},
+           given={Pascal\bibnamedelima L.},
+           giveni={P\bibinitperiod\bibinitdelim L\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{a1dd0389cd7ee40926c45ce89a0913f9}
+      \strng{fullhash}{a1dd0389cd7ee40926c45ce89a0913f9}
+      \strng{bibnamehash}{a1dd0389cd7ee40926c45ce89a0913f9}
+      \strng{authorbibnamehash}{a1dd0389cd7ee40926c45ce89a0913f9}
+      \strng{authornamehash}{a1dd0389cd7ee40926c45ce89a0913f9}
+      \strng{authorfullhash}{a1dd0389cd7ee40926c45ce89a0913f9}
+      \field{sortinit}{B}
+      \field{sortinithash}{8de16967003c7207dae369d874f1456e}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{year}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{issn}{09214488}
+      \field{journaltitle}{Small Ruminant Research}
+      \field{month}{7}
+      \field{number}{3}
+      \field{title}{{Genetic and phenotypic aspects of the growth curve characteristics in Mehraban Iranian fat-tailed sheep}}
+      \field{volume}{29}
+      \field{year}{1998}
+      \field{pages}{261\bibrangedash 269}
+      \range{pages}{9}
+      \verb{doi}
+      \verb 10.1016/S0921-4488(97)00142-9
+      \endverb
+      \verb{urlraw}
+      \verb https://linkinghub.elsevier.com/retrieve/pii/S0921448897001429
+      \endverb
+      \verb{url}
+      \verb https://linkinghub.elsevier.com/retrieve/pii/S0921448897001429
+      \endverb
+    \endentry
+    \entry{Boggs1989}{article}{}
+      \name{author}{4}{}{%
+        {{un=0,uniquepart=base,hash=3fd71b507159de8265688af1f476a9af}{%
+           family={Boggs},
+           familyi={B\bibinitperiod},
+           given={Paul\bibnamedelima T.},
+           giveni={P\bibinitperiod\bibinitdelim T\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=d3d7ca93c992631c6d0efd85d6051500}{%
+           family={Donaldson},
+           familyi={D\bibinitperiod},
+           given={Janet\bibnamedelima R.},
+           giveni={J\bibinitperiod\bibinitdelim R\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=a64fd31994f502aa6115823fac8b6b53}{%
+           family={Byrd},
+           familyi={B\bibinitperiod},
+           given={Richaard\bibnamedelima h.},
+           giveni={R\bibinitperiod\bibinitdelim h\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=6e94ed24df85b85e81dea6e87e763b73}{%
+           family={Schnabel},
+           familyi={S\bibinitperiod},
+           given={Robert\bibnamedelima B.},
+           giveni={R\bibinitperiod\bibinitdelim B\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{e5006f45b135e40cdd62a698c8291fb1}
+      \strng{fullhash}{c26c59cd25f383105fe0c05d60406900}
+      \strng{bibnamehash}{e5006f45b135e40cdd62a698c8291fb1}
+      \strng{authorbibnamehash}{e5006f45b135e40cdd62a698c8291fb1}
+      \strng{authornamehash}{e5006f45b135e40cdd62a698c8291fb1}
+      \strng{authorfullhash}{c26c59cd25f383105fe0c05d60406900}
+      \field{sortinit}{B}
+      \field{sortinithash}{8de16967003c7207dae369d874f1456e}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{year}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{issn}{0098-3500}
+      \field{journaltitle}{ACM Transactions on Mathematical Software (TOMS)}
+      \field{month}{12}
+      \field{number}{4}
+      \field{title}{{Algorithm 676: ODRPACK: software for weighted orthogonal distance regression}}
+      \field{volume}{15}
+      \field{year}{1989}
+      \field{pages}{348\bibrangedash 364}
+      \range{pages}{17}
+      \verb{doi}
+      \verb 10.1145/76909.76913
+      \endverb
+      \verb{urlraw}
+      \verb http://dl.acm.org/doi/10.1145/76909.76913
+      \endverb
+      \verb{url}
+      \verb http://dl.acm.org/doi/10.1145/76909.76913
+      \endverb
+    \endentry
+    \entry{Box1976}{article}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=d30289ba50f0f7219fb405bc35b8b71c}{%
+           family={Box},
+           familyi={B\bibinitperiod},
+           given={George\bibnamedelimb E.\bibnamedelimi P.},
+           giveni={G\bibinitperiod\bibinitdelim E\bibinitperiod\bibinitdelim P\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{d30289ba50f0f7219fb405bc35b8b71c}
+      \strng{fullhash}{d30289ba50f0f7219fb405bc35b8b71c}
+      \strng{bibnamehash}{d30289ba50f0f7219fb405bc35b8b71c}
+      \strng{authorbibnamehash}{d30289ba50f0f7219fb405bc35b8b71c}
+      \strng{authornamehash}{d30289ba50f0f7219fb405bc35b8b71c}
+      \strng{authorfullhash}{d30289ba50f0f7219fb405bc35b8b71c}
+      \field{sortinit}{B}
+      \field{sortinithash}{8de16967003c7207dae369d874f1456e}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{year}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{issn}{0162-1459}
+      \field{journaltitle}{Journal of the American Statistical Association}
+      \field{month}{12}
+      \field{number}{356}
+      \field{title}{{Science and Statistics}}
+      \field{volume}{71}
+      \field{year}{1976}
+      \field{pages}{791\bibrangedash 799}
+      \range{pages}{9}
+      \verb{doi}
+      \verb 10.1080/01621459.1976.10480949
+      \endverb
+      \verb{urlraw}
+      \verb http://www.tandfonline.com/doi/abs/10.1080/01621459.1976.10480949
+      \endverb
+      \verb{url}
+      \verb http://www.tandfonline.com/doi/abs/10.1080/01621459.1976.10480949
+      \endverb
+    \endentry
+    \entry{Brunner2019}{article}{}
+      \name{author}{5}{}{%
+        {{un=0,uniquepart=base,hash=2e5a496f146b80c5ab599d7d5c01494c}{%
+           family={Brunner},
+           familyi={B\bibinitperiod},
+           given={Norbert},
+           giveni={N\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=b8c2184047625c7a94c0224060bc10c4}{%
+           family={K{ü}hleitner},
+           familyi={K\bibinitperiod},
+           given={Manfred},
+           giveni={M\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=bde74989242a7df7773ed3fe67a83bb0}{%
+           family={Nowak},
+           familyi={N\bibinitperiod},
+           given={Werner\bibnamedelima Georg},
+           giveni={W\bibinitperiod\bibinitdelim G\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=84204ac6657b4c8be06faf42c49c00f8}{%
+           family={Renner-Martin},
+           familyi={R\bibinithyphendelim M\bibinitperiod},
+           given={Katharina},
+           giveni={K\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=b83673813a8d42681788257bc9134955}{%
+           family={Scheicher},
+           familyi={S\bibinitperiod},
+           given={Klaus},
+           giveni={K\bibinitperiod},
+           givenun=0}}%
+      }
+      \name{editor}{1}{}{%
+        {{hash=a021c27e3741f73138ce8c609263930e}{%
+           family={Joger},
+           familyi={J\bibinitperiod},
+           given={Ulrich},
+           giveni={U\bibinitperiod}}}%
+      }
+      \strng{namehash}{2178035d71b4af91f128c4776cbba75a}
+      \strng{fullhash}{e7148a2422f2c73f883d42e24e34b0a1}
+      \strng{bibnamehash}{2178035d71b4af91f128c4776cbba75a}
+      \strng{authorbibnamehash}{2178035d71b4af91f128c4776cbba75a}
+      \strng{authornamehash}{2178035d71b4af91f128c4776cbba75a}
+      \strng{authorfullhash}{e7148a2422f2c73f883d42e24e34b0a1}
+      \strng{editorbibnamehash}{a021c27e3741f73138ce8c609263930e}
+      \strng{editornamehash}{a021c27e3741f73138ce8c609263930e}
+      \strng{editorfullhash}{a021c27e3741f73138ce8c609263930e}
+      \field{sortinit}{B}
+      \field{sortinithash}{8de16967003c7207dae369d874f1456e}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{year}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{issn}{1932-6203}
+      \field{journaltitle}{PLOS ONE}
+      \field{month}{10}
+      \field{number}{10}
+      \field{title}{{Comparing growth patterns of three species: Similarities and differences}}
+      \field{volume}{14}
+      \field{year}{2019}
+      \field{pages}{e0224168}
+      \range{pages}{-1}
+      \verb{doi}
+      \verb 10.1371/journal.pone.0224168
+      \endverb
+      \verb{urlraw}
+      \verb https://dx.plos.org/10.1371/journal.pone.0224168
+      \endverb
+      \verb{url}
+      \verb https://dx.plos.org/10.1371/journal.pone.0224168
+      \endverb
+    \endentry
+    \entry{Burnham2002}{book}{}
+      \name{author}{2}{}{%
+        {{un=1,uniquepart=given,hash=ec1ef9e3eefbf57e7cc87118c7edf6c3}{%
+           family={Burnham},
+           familyi={B\bibinitperiod},
+           given={K.P.},
+           giveni={K\bibinitperiod},
+           givenun=1}}%
+        {{un=1,uniquepart=given,hash=47e8ef21443c27935171d35189eef0a6}{%
+           family={Anderson},
+           familyi={A\bibinitperiod},
+           given={D.R.},
+           giveni={D\bibinitperiod},
+           givenun=1}}%
+      }
+      \list{location}{1}{%
+        {New York, NY}%
+      }
+      \list{publisher}{1}{%
+        {Springer Science {\&} Business Media}%
+      }
+      \strng{namehash}{245c6b70269c829c865e2cfb0461d6e5}
+      \strng{fullhash}{245c6b70269c829c865e2cfb0461d6e5}
+      \strng{bibnamehash}{245c6b70269c829c865e2cfb0461d6e5}
+      \strng{authorbibnamehash}{245c6b70269c829c865e2cfb0461d6e5}
+      \strng{authornamehash}{245c6b70269c829c865e2cfb0461d6e5}
+      \strng{authorfullhash}{245c6b70269c829c865e2cfb0461d6e5}
+      \field{sortinit}{B}
+      \field{sortinithash}{8de16967003c7207dae369d874f1456e}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{year}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{{Model selection and multimodel inference: a practical information-theoretic approach}}
+      \field{year}{2002}
+    \endentry
+    \entry{Burnham2011}{article}{}
+      \name{author}{3}{}{%
+        {{un=1,uniquepart=given,hash=b0c95b47a095e05a82949d66da9b76ae}{%
+           family={Burnham},
+           familyi={B\bibinitperiod},
+           given={Kenneth\bibnamedelima P.},
+           giveni={K\bibinitperiod\bibinitdelim P\bibinitperiod},
+           givenun=1}}%
+        {{un=1,uniquepart=given,hash=9dcae0a4f92c194d22d9b6defb776251}{%
+           family={Anderson},
+           familyi={A\bibinitperiod},
+           given={David\bibnamedelima R.},
+           giveni={D\bibinitperiod\bibinitdelim R\bibinitperiod},
+           givenun=1}}%
+        {{un=0,uniquepart=base,hash=4e69cb0f75e4b1db05a00f259a4ad183}{%
+           family={Huyvaert},
+           familyi={H\bibinitperiod},
+           given={Kathryn\bibnamedelima P.},
+           giveni={K\bibinitperiod\bibinitdelim P\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{1e4d4f8ec5670b0d097f01128e8654d9}
+      \strng{fullhash}{1e4d4f8ec5670b0d097f01128e8654d9}
+      \strng{bibnamehash}{1e4d4f8ec5670b0d097f01128e8654d9}
+      \strng{authorbibnamehash}{1e4d4f8ec5670b0d097f01128e8654d9}
+      \strng{authornamehash}{1e4d4f8ec5670b0d097f01128e8654d9}
+      \strng{authorfullhash}{1e4d4f8ec5670b0d097f01128e8654d9}
+      \field{sortinit}{B}
+      \field{sortinithash}{8de16967003c7207dae369d874f1456e}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{year}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{issn}{0340-5443}
+      \field{journaltitle}{Behavioral Ecology and Sociobiology}
+      \field{month}{1}
+      \field{number}{1}
+      \field{title}{{AIC model selection and multimodel inference in behavioral ecology: some background, observations, and comparisons}}
+      \field{volume}{65}
+      \field{year}{2011}
+      \field{pages}{23\bibrangedash 35}
+      \range{pages}{13}
+      \verb{doi}
+      \verb 10.1007/s00265-010-1029-6
+      \endverb
+      \verb{urlraw}
+      \verb http://link.springer.com/10.1007/s00265-010-1029-6
+      \endverb
+      \verb{url}
+      \verb http://link.springer.com/10.1007/s00265-010-1029-6
+      \endverb
+    \endentry
+    \entry{Chinsamy1990}{thesis}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=38fa7b4e57efbe2a46519d3df588f8db}{%
+           family={Chinsamy},
+           familyi={C\bibinitperiod},
+           given={A},
+           giveni={A\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{institution}{1}{%
+        {University of the Witswatersrand}%
+      }
+      \strng{namehash}{38fa7b4e57efbe2a46519d3df588f8db}
+      \strng{fullhash}{38fa7b4e57efbe2a46519d3df588f8db}
+      \strng{bibnamehash}{38fa7b4e57efbe2a46519d3df588f8db}
+      \strng{authorbibnamehash}{38fa7b4e57efbe2a46519d3df588f8db}
+      \strng{authornamehash}{38fa7b4e57efbe2a46519d3df588f8db}
+      \strng{authorfullhash}{38fa7b4e57efbe2a46519d3df588f8db}
+      \field{sortinit}{C}
+      \field{sortinithash}{4c244ceae61406cdc0cc2ce1cb1ff703}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{year}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{Femora of Syntarsus rhodesiensis specimens of differing ontogenetic stages were sectioned and prepared for histological study. Features such as the structure of the cortical bone tissue, the degree of vascularisation and haversian substitution, and the general pattern of bone deposition through ontogeny, are described. The question of the bearing of bone histology on interpretation of the probable physiology of Syntarsus is also discussed.}
+      \field{title}{{Physiological implications of the bone histology of Syntarsus rhodesiensis (Saurischia: Theropoda)}}
+      \field{type}{PhD}
+      \field{year}{1990}
+    \endentry
+    \entry{Cooper2008}{article}{}
+      \name{author}{4}{}{%
+        {{un=0,uniquepart=base,hash=57250d40d565aae60f8fed46b439ea98}{%
+           family={Cooper},
+           familyi={C\bibinitperiod},
+           given={Lisa\bibnamedelima Noelle},
+           giveni={L\bibinitperiod\bibinitdelim N\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=5497038776ea8cb9f349c85763b1490b}{%
+           family={Lee},
+           familyi={L\bibinitperiod},
+           given={Andrew\bibnamedelima H},
+           giveni={A\bibinitperiod\bibinitdelim H\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=4d9c42596f05587a2ad02dbb8742c4c2}{%
+           family={Taper},
+           familyi={T\bibinitperiod},
+           given={Mark\bibnamedelima L},
+           giveni={M\bibinitperiod\bibinitdelim L\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=3be75b1489a0fc1358582c60ba986400}{%
+           family={Horner},
+           familyi={H\bibinitperiod},
+           given={John\bibnamedelima R},
+           giveni={J\bibinitperiod\bibinitdelim R\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{8a70a803d59527b1aef96b4ce2fe8302}
+      \strng{fullhash}{09ea2e5450a82f6629cafc65bc9a7d93}
+      \strng{bibnamehash}{8a70a803d59527b1aef96b4ce2fe8302}
+      \strng{authorbibnamehash}{8a70a803d59527b1aef96b4ce2fe8302}
+      \strng{authornamehash}{8a70a803d59527b1aef96b4ce2fe8302}
+      \strng{authorfullhash}{09ea2e5450a82f6629cafc65bc9a7d93}
+      \field{sortinit}{C}
+      \field{sortinithash}{4c244ceae61406cdc0cc2ce1cb1ff703}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{year}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{issn}{0962-8452}
+      \field{journaltitle}{Proceedings of the Royal Society B: Biological Sciences}
+      \field{month}{11}
+      \field{number}{1651}
+      \field{title}{{Relative growth rates of predator and prey dinosaurs reflect effects of predation}}
+      \field{volume}{275}
+      \field{year}{2008}
+      \field{pages}{2609\bibrangedash 2615}
+      \range{pages}{7}
+      \verb{doi}
+      \verb 10.1098/rspb.2008.0912
+      \endverb
+      \verb{urlraw}
+      \verb https://royalsocietypublishing.org/doi/10.1098/rspb.2008.0912
+      \endverb
+      \verb{url}
+      \verb https://royalsocietypublishing.org/doi/10.1098/rspb.2008.0912
+      \endverb
+    \endentry
+    \entry{DeNise1985}{article}{}
+      \name{author}{2}{}{%
+        {{un=0,uniquepart=base,hash=b193903de5e0f837a656d4218583d1fb}{%
+           family={DeNise},
+           familyi={D\bibinitperiod},
+           given={R.\bibnamedelimi S.\bibnamedelimi Kersey},
+           giveni={R\bibinitperiod\bibinitdelim S\bibinitperiod\bibinitdelim K\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=3f6bc70d91cf591b1e5776770c21d28f}{%
+           family={Brinks},
+           familyi={B\bibinitperiod},
+           given={J.\bibnamedelimi S.},
+           giveni={J\bibinitperiod\bibinitdelim S\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{4a37132553178ff1209b99f9d1d21a1f}
+      \strng{fullhash}{4a37132553178ff1209b99f9d1d21a1f}
+      \strng{bibnamehash}{4a37132553178ff1209b99f9d1d21a1f}
+      \strng{authorbibnamehash}{4a37132553178ff1209b99f9d1d21a1f}
+      \strng{authornamehash}{4a37132553178ff1209b99f9d1d21a1f}
+      \strng{authorfullhash}{4a37132553178ff1209b99f9d1d21a1f}
+      \field{sortinit}{D}
+      \field{sortinithash}{c438b3d5d027251ba63f5ed538d98af5}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{year}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{issn}{0021-8812}
+      \field{journaltitle}{Journal of Animal Science}
+      \field{month}{12}
+      \field{number}{6}
+      \field{title}{{Genetic and Environmental Aspects of the Growth Curve Parameters in Beef Cows}}
+      \field{volume}{61}
+      \field{year}{1985}
+      \field{pages}{1431\bibrangedash 1440}
+      \range{pages}{10}
+      \verb{doi}
+      \verb 10.2527/jas1985.6161431x
+      \endverb
+      \verb{urlraw}
+      \verb https://academic.oup.com/jas/article/61/6/1431-1440/4746126
+      \endverb
+      \verb{url}
+      \verb https://academic.oup.com/jas/article/61/6/1431-1440/4746126
+      \endverb
+    \endentry
+    \entry{Do2019}{article}{}
+      \name{author}{2}{}{%
+        {{un=0,uniquepart=base,hash=482e567f438d7135c3bec331d5e0bee9}{%
+           family={Do},
+           familyi={D\bibinitperiod},
+           given={Duy\bibnamedelima Ngoc},
+           giveni={D\bibinitperiod\bibinitdelim N\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=5ec67ec4479ae75ee170db8f4174097e}{%
+           family={Miar},
+           familyi={M\bibinitperiod},
+           given={Younes},
+           giveni={Y\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{6a1afc22e099cb6d07965ff63d6fa82f}
+      \strng{fullhash}{6a1afc22e099cb6d07965ff63d6fa82f}
+      \strng{bibnamehash}{6a1afc22e099cb6d07965ff63d6fa82f}
+      \strng{authorbibnamehash}{6a1afc22e099cb6d07965ff63d6fa82f}
+      \strng{authornamehash}{6a1afc22e099cb6d07965ff63d6fa82f}
+      \strng{authorfullhash}{6a1afc22e099cb6d07965ff63d6fa82f}
+      \field{sortinit}{D}
+      \field{sortinithash}{c438b3d5d027251ba63f5ed538d98af5}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{year}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{Modelling the growth curves of animals is important for optimizing the management and efficiency of animal production; however, little is known about the growth curves in American mink (Neovison vison). The study evaluated the performances of four three-parameter (Logistic, Gompertz, von Bertalanffy, and Brody), four four-parameter (Richards, Weibull, Bridges, and Janoscheck) and two polynomial models for describing the growth curves in mink. Body weights were collected from the third week of life to the week 31 in 738 black mink (373 males and 365 females). Models were fitted using the nls and nlsLM functions in stats and minpack.lm packages in R software, respectively. The Akaike's information criterion (AIC) and Bayesian information criterion (BIC) were used for model comparison. Based on these criteria, Logistic and Richards were the best models for males and females, respectively. Four-parameter models had better performance compared to the other models except for Logistic model. The estimated maximum weight and mature growth rate varied among the models and differed between males and females. The results indicated that males and females had different growth curves as males grew faster and reached to the maximum body weight later compared to females. Further studies on genetic parameters and selection response for growth curve parameters are required for development of selection programs based on the shape of growth curves in mink.}
+      \field{issn}{2076-2615}
+      \field{journaltitle}{Animals}
+      \field{month}{12}
+      \field{number}{1}
+      \field{title}{{Evaluation of Growth Curve Models for Body Weight in American Mink}}
+      \field{volume}{10}
+      \field{year}{2019}
+      \field{pages}{22}
+      \range{pages}{1}
+      \verb{doi}
+      \verb 10.3390/ani10010022
+      \endverb
+      \verb{urlraw}
+      \verb https://www.mdpi.com/2076-2615/10/1/22
+      \endverb
+      \verb{url}
+      \verb https://www.mdpi.com/2076-2615/10/1/22
+      \endverb
+    \endentry
+    \entry{Erickson2009}{article}{}
+      \name{author}{5}{}{%
+        {{un=0,uniquepart=base,hash=1dd231ff008f96c70608075c3d44d5e9}{%
+           family={Erickson},
+           familyi={E\bibinitperiod},
+           given={Gregory\bibnamedelima M.},
+           giveni={G\bibinitperiod\bibinitdelim M\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=f227ffb4e26c9351e7b99db1733731d5}{%
+           family={Makovicky},
+           familyi={M\bibinitperiod},
+           given={Peter\bibnamedelima J.},
+           giveni={P\bibinitperiod\bibinitdelim J\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=d6741c51a24760ee8474caeb79395ee9}{%
+           family={Inouye},
+           familyi={I\bibinitperiod},
+           given={Brian\bibnamedelima D.},
+           giveni={B\bibinitperiod\bibinitdelim D\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=7b2ee7e3d94507c24d971304e4f789eb}{%
+           family={Zhou},
+           familyi={Z\bibinitperiod},
+           given={Chang-Fu},
+           giveni={C\bibinithyphendelim F\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=89b6447ae0f627d7444cef1d78133f25}{%
+           family={Gao},
+           familyi={G\bibinitperiod},
+           given={Ke-Qin},
+           giveni={K\bibinithyphendelim Q\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{71e039e43ed3851c80b813400ca1d9d1}
+      \strng{fullhash}{785e7481f453525358778152ae1ca233}
+      \strng{bibnamehash}{71e039e43ed3851c80b813400ca1d9d1}
+      \strng{authorbibnamehash}{71e039e43ed3851c80b813400ca1d9d1}
+      \strng{authornamehash}{71e039e43ed3851c80b813400ca1d9d1}
+      \strng{authorfullhash}{785e7481f453525358778152ae1ca233}
+      \field{extraname}{1}
+      \field{sortinit}{E}
+      \field{sortinithash}{c554bd1a0b76ea92b9f105fe36d9c7b0}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{year}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{issn}{19328486}
+      \field{journaltitle}{The Anatomical Record: Advances in Integrative Anatomy and Evolutionary Biology}
+      \field{month}{9}
+      \field{number}{9}
+      \field{title}{{A Life Table for Psittacosaurus lujiatunensis : Initial Insights Into Ornithischian Dinosaur Population Biology}}
+      \field{volume}{292}
+      \field{year}{2009}
+      \field{pages}{1514\bibrangedash 1521}
+      \range{pages}{8}
+      \verb{doi}
+      \verb 10.1002/ar.20992
+      \endverb
+      \verb{urlraw}
+      \verb http://doi.wiley.com/10.1002/ar.20992
+      \endverb
+      \verb{url}
+      \verb http://doi.wiley.com/10.1002/ar.20992
+      \endverb
+    \endentry
+    \entry{Erickson2015}{article}{}
+      \name{author}{5}{}{%
+        {{un=0,uniquepart=base,hash=1dd231ff008f96c70608075c3d44d5e9}{%
+           family={Erickson},
+           familyi={E\bibinitperiod},
+           given={Gregory\bibnamedelima M.},
+           giveni={G\bibinitperiod\bibinitdelim M\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=f227ffb4e26c9351e7b99db1733731d5}{%
+           family={Makovicky},
+           familyi={M\bibinitperiod},
+           given={Peter\bibnamedelima J.},
+           giveni={P\bibinitperiod\bibinitdelim J\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=d6741c51a24760ee8474caeb79395ee9}{%
+           family={Inouye},
+           familyi={I\bibinitperiod},
+           given={Brian\bibnamedelima D.},
+           giveni={B\bibinitperiod\bibinitdelim D\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=7b2ee7e3d94507c24d971304e4f789eb}{%
+           family={Zhou},
+           familyi={Z\bibinitperiod},
+           given={Chang-Fu},
+           giveni={C\bibinithyphendelim F\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=89b6447ae0f627d7444cef1d78133f25}{%
+           family={Gao},
+           familyi={G\bibinitperiod},
+           given={Ke-Qin},
+           giveni={K\bibinithyphendelim Q\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{71e039e43ed3851c80b813400ca1d9d1}
+      \strng{fullhash}{785e7481f453525358778152ae1ca233}
+      \strng{bibnamehash}{71e039e43ed3851c80b813400ca1d9d1}
+      \strng{authorbibnamehash}{71e039e43ed3851c80b813400ca1d9d1}
+      \strng{authornamehash}{71e039e43ed3851c80b813400ca1d9d1}
+      \strng{authorfullhash}{785e7481f453525358778152ae1ca233}
+      \field{extraname}{2}
+      \field{sortinit}{E}
+      \field{sortinithash}{c554bd1a0b76ea92b9f105fe36d9c7b0}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{year}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{issn}{19328486}
+      \field{journaltitle}{The Anatomical Record}
+      \field{month}{10}
+      \field{number}{10}
+      \field{title}{{Flawed Analysis? A Response to Myhrvold}}
+      \field{volume}{298}
+      \field{year}{2015}
+      \field{pages}{1669\bibrangedash 1672}
+      \range{pages}{4}
+      \verb{doi}
+      \verb 10.1002/ar.23187
+      \endverb
+      \verb{urlraw}
+      \verb http://doi.wiley.com/10.1002/ar.23187
+      \endverb
+      \verb{url}
+      \verb http://doi.wiley.com/10.1002/ar.23187
+      \endverb
+    \endentry
+    \entry{Ersoy2006}{article}{}
+      \name{author}{3}{}{%
+        {{un=0,uniquepart=base,hash=4bb4f6847a233217c50f47510fc14897}{%
+           family={Ersoy},
+           familyi={E\bibinitperiod},
+           given={Erbil},
+           giveni={E\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=d259847bb3a02e006767d6745be89b42}{%
+           family={Mehmet},
+           familyi={M\bibinitperiod},
+           given={Mendes},
+           giveni={M\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=60d6819fa138134b71e25c4bec766fa0}{%
+           family={Aktan},
+           familyi={A\bibinitperiod},
+           given={Sedat},
+           giveni={S\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{bffbc34b11c8c18c1be4c358b81fea0d}
+      \strng{fullhash}{bffbc34b11c8c18c1be4c358b81fea0d}
+      \strng{bibnamehash}{bffbc34b11c8c18c1be4c358b81fea0d}
+      \strng{authorbibnamehash}{bffbc34b11c8c18c1be4c358b81fea0d}
+      \strng{authornamehash}{bffbc34b11c8c18c1be4c358b81fea0d}
+      \strng{authorfullhash}{bffbc34b11c8c18c1be4c358b81fea0d}
+      \field{sortinit}{E}
+      \field{sortinithash}{c554bd1a0b76ea92b9f105fe36d9c7b0}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{year}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Archiv fur Tierzucht}
+      \field{number}{3}
+      \field{title}{{Growth curve establishment for American Bronze turkeys}}
+      \field{volume}{49}
+      \field{year}{2006}
+    \endentry
+    \entry{Garcia-Muniz2019}{article}{}
+      \name{author}{4}{}{%
+        {{un=0,uniquepart=base,hash=8ef9c597af97a3adb68a2e36f7d0653d}{%
+           family={Garc{í}a-Mu{ñ}iz},
+           familyi={G\bibinithyphendelim M\bibinitperiod},
+           given={J.G.},
+           giveni={J\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=a31b9bdfc563d6a8e0312ca29d16366e}{%
+           family={Ram{í}rez-Valverde},
+           familyi={R\bibinithyphendelim V\bibinitperiod},
+           given={R.},
+           giveni={R\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=59c2e045902a25f24d95cd3db6f23655}{%
+           family={N{ú}{ñ}ez-Dom{í}nguez},
+           familyi={N\bibinitperiod},
+           given={R.},
+           giveni={R\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=70ea422d1bf63b9c45b9cc7479276753}{%
+           family={Hidalgo-Moreno},
+           familyi={H\bibinithyphendelim M\bibinitperiod},
+           given={J.A.},
+           giveni={J\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{b8d51a427c41cb1e3f5cdfc19c098c86}
+      \strng{fullhash}{0aae151b0903bf98946e6826b6f2801a}
+      \strng{bibnamehash}{b8d51a427c41cb1e3f5cdfc19c098c86}
+      \strng{authorbibnamehash}{b8d51a427c41cb1e3f5cdfc19c098c86}
+      \strng{authornamehash}{b8d51a427c41cb1e3f5cdfc19c098c86}
+      \strng{authorfullhash}{0aae151b0903bf98946e6826b6f2801a}
+      \field{sortinit}{G}
+      \field{sortinithash}{62eb2aa29549e4fdbd3cb154ec5711cb}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{year}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{issn}{23523409}
+      \field{journaltitle}{Data in Brief}
+      \field{month}{4}
+      \field{title}{{Dataset on growth curves of Boer goats fitted by ten non-linear functions}}
+      \field{volume}{23}
+      \field{year}{2019}
+      \field{pages}{103672}
+      \range{pages}{1}
+      \verb{doi}
+      \verb 10.1016/j.dib.2019.01.020
+      \endverb
+      \verb{urlraw}
+      \verb https://linkinghub.elsevier.com/retrieve/pii/S2352340919300216
+      \endverb
+      \verb{url}
+      \verb https://linkinghub.elsevier.com/retrieve/pii/S2352340919300216
+      \endverb
+    \endentry
+    \entry{Gbangboche2008}{article}{}
+      \name{author}{5}{}{%
+        {{un=0,uniquepart=base,hash=67e73f75a4b9520033c927f3e360dcba}{%
+           family={Gbangboche},
+           familyi={G\bibinitperiod},
+           given={A.\bibnamedelimi B.},
+           giveni={A\bibinitperiod\bibinitdelim B\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=bf1eb05dfd1641673e0cc81d827f89aa}{%
+           family={Glele-Kakai},
+           familyi={G\bibinithyphendelim K\bibinitperiod},
+           given={R.},
+           giveni={R\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=b26ad80acf331f1e05fd37a183a37565}{%
+           family={Salifou},
+           familyi={S\bibinitperiod},
+           given={S.},
+           giveni={S\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=868f8a9e8392cd6ef536388162960d12}{%
+           family={Albuquerque},
+           familyi={A\bibinitperiod},
+           given={L.\bibnamedelimi G.},
+           giveni={L\bibinitperiod\bibinitdelim G\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=9415563d3dc50c151aec256e9f535a9a}{%
+           family={Leroy},
+           familyi={L\bibinitperiod},
+           given={P.\bibnamedelimi L.},
+           giveni={P\bibinitperiod\bibinitdelim L\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{5f0be72b5b4bd1bcf81289e322073853}
+      \strng{fullhash}{4e603449b596e0d7e08e32a0da64bc1b}
+      \strng{bibnamehash}{5f0be72b5b4bd1bcf81289e322073853}
+      \strng{authorbibnamehash}{5f0be72b5b4bd1bcf81289e322073853}
+      \strng{authornamehash}{5f0be72b5b4bd1bcf81289e322073853}
+      \strng{authorfullhash}{4e603449b596e0d7e08e32a0da64bc1b}
+      \field{sortinit}{G}
+      \field{sortinithash}{62eb2aa29549e4fdbd3cb154ec5711cb}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{year}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{The objectives of this study were to compare the goodness of fit of four non-linear growth models, i.e. Brody, Gompertz, Logistic and Von Bertalanffy, in West African Dwarf (WAD) sheep. A total of 5274 monthly weight records from birth up to 180 days of age from 889 lambs, collected during 2001 to 2004 in Betecoucou breeding farm in Benin were used. In the preliminary analysis, the General Linear Model Procedure of the Statistical Analysis Systems Institute was applied to the dataset to identify the significant effects of the sex of lamb (male and female), type of birth (single and twin), season of birth (rainy season and dry season), parity of dam (1, 2 and 3) and year of birth (2001, 2002, 2003 and 2004) on the observed birth weight and monthly weight up to 6 months of age. The models parameters ( A , B and k ), coefficient of determination ( R 2 ), mean square error (MSE) were calculated using language of technical computing package Matlab ® , 2006. The mean values of A , B and k were substituted into each model to calculate the corresponding Akaike's Information Criterion (AIC). Among the four growth functions, the Brody model has been selected for its accuracy of fit according to the higher R 2 , lower MSE and AIC. Finally, the parameters A , B and k were adjusted in Matlab ® , 2006 for the sex of lamb, year of birth, season of birth, birth type and the parity of ewe, providing a specific slope of the Brody growth curve. The results of this study suggest that Brody model can be useful for WAD sheep breeding in Betecoucou farm conditions through growth monitoring.}
+      \field{issn}{1751-7311}
+      \field{journaltitle}{animal}
+      \field{month}{7}
+      \field{number}{7}
+      \field{title}{{Comparison of non-linear growth models to describe the growth curve in West African Dwarf sheep}}
+      \field{volume}{2}
+      \field{year}{2008}
+      \field{pages}{1003\bibrangedash 1012}
+      \range{pages}{10}
+      \verb{doi}
+      \verb 10.1017/S1751731108002206
+      \endverb
+      \verb{urlraw}
+      \verb https://www.cambridge.org/core/product/identifier/S1751731108002206/type/journal{\_}article
+      \endverb
+      \verb{url}
+      \verb https://www.cambridge.org/core/product/identifier/S1751731108002206/type/journal%7B%5C_%7Darticle
+      \endverb
+    \endentry
+    \entry{GhaviHossein-Zadeh2015}{article}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=9f161599b341f14c4d4693578ba61056}{%
+           family={{Ghavi Hossein-Zadeh}},
+           familyi={G\bibinitperiod},
+           given={Navid},
+           giveni={N\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{9f161599b341f14c4d4693578ba61056}
+      \strng{fullhash}{9f161599b341f14c4d4693578ba61056}
+      \strng{bibnamehash}{9f161599b341f14c4d4693578ba61056}
+      \strng{authorbibnamehash}{9f161599b341f14c4d4693578ba61056}
+      \strng{authornamehash}{9f161599b341f14c4d4693578ba61056}
+      \strng{authorfullhash}{9f161599b341f14c4d4693578ba61056}
+      \field{sortinit}{G}
+      \field{sortinithash}{62eb2aa29549e4fdbd3cb154ec5711cb}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{year}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{issn}{09214488}
+      \field{journaltitle}{Small Ruminant Research}
+      \field{month}{9}
+      \field{title}{{Modeling the growth curve of Iranian Shall sheep using non-linear growth models}}
+      \field{volume}{130}
+      \field{year}{2015}
+      \field{pages}{60\bibrangedash 66}
+      \range{pages}{7}
+      \verb{doi}
+      \verb 10.1016/j.smallrumres.2015.07.014
+      \endverb
+      \verb{urlraw}
+      \verb https://linkinghub.elsevier.com/retrieve/pii/S0921448815300195
+      \endverb
+      \verb{url}
+      \verb https://linkinghub.elsevier.com/retrieve/pii/S0921448815300195
+      \endverb
+    \endentry
+    \entry{Ghiasi2018}{article}{}
+      \name{author}{3}{}{%
+        {{un=0,uniquepart=base,hash=26bda586fe380de3b4c74f5a976ba941}{%
+           family={Ghiasi},
+           familyi={G\bibinitperiod},
+           given={Heydar},
+           giveni={H\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=31a7044f13464c6b7b9ed42ec99aaeb6}{%
+           family={Lupi},
+           familyi={L\bibinitperiod},
+           given={T.M.},
+           giveni={T\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=f853c7c501445952ce4237150be47011}{%
+           family={Mokhtari},
+           familyi={M\bibinitperiod},
+           given={M.S.},
+           giveni={M\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{c92d0a4d6361c5b7ef59f68407873986}
+      \strng{fullhash}{c92d0a4d6361c5b7ef59f68407873986}
+      \strng{bibnamehash}{c92d0a4d6361c5b7ef59f68407873986}
+      \strng{authorbibnamehash}{c92d0a4d6361c5b7ef59f68407873986}
+      \strng{authornamehash}{c92d0a4d6361c5b7ef59f68407873986}
+      \strng{authorfullhash}{c92d0a4d6361c5b7ef59f68407873986}
+      \field{sortinit}{G}
+      \field{sortinithash}{62eb2aa29549e4fdbd3cb154ec5711cb}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{year}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{issn}{09214488}
+      \field{journaltitle}{Small Ruminant Research}
+      \field{month}{8}
+      \field{title}{{The estimation of genetic parameters for growth curve traits in Raeini Cashmere goat described by Gompertz model}}
+      \field{volume}{165}
+      \field{year}{2018}
+      \field{pages}{66\bibrangedash 70}
+      \range{pages}{5}
+      \verb{doi}
+      \verb 10.1016/j.smallrumres.2018.06.015
+      \endverb
+      \verb{urlraw}
+      \verb https://linkinghub.elsevier.com/retrieve/pii/S0921448818305583
+      \endverb
+      \verb{url}
+      \verb https://linkinghub.elsevier.com/retrieve/pii/S0921448818305583
+      \endverb
+    \endentry
+    \entry{Hurvich1989}{article}{}
+      \name{author}{2}{}{%
+        {{un=0,uniquepart=base,hash=81fed1e4683221a270442304e64467a5}{%
+           family={Hurvich},
+           familyi={H\bibinitperiod},
+           given={C},
+           giveni={C\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=1fb0394bdc77da2ae6ea92d3a61313de}{%
+           family={Tsai},
+           familyi={T\bibinitperiod},
+           given={C},
+           giveni={C\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{cf2c11b5aa850c6c1a61f0dbd9b0e258}
+      \strng{fullhash}{cf2c11b5aa850c6c1a61f0dbd9b0e258}
+      \strng{bibnamehash}{cf2c11b5aa850c6c1a61f0dbd9b0e258}
+      \strng{authorbibnamehash}{cf2c11b5aa850c6c1a61f0dbd9b0e258}
+      \strng{authornamehash}{cf2c11b5aa850c6c1a61f0dbd9b0e258}
+      \strng{authorfullhash}{cf2c11b5aa850c6c1a61f0dbd9b0e258}
+      \field{sortinit}{H}
+      \field{sortinithash}{6db6145dae8dc9e1271a8d556090b50a}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{year}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{issn}{0006-3444}
+      \field{journaltitle}{Biometrika}
+      \field{number}{2}
+      \field{title}{{Regression and time series model selection in small samples}}
+      \field{volume}{76}
+      \field{year}{1989}
+      \field{pages}{297\bibrangedash 307}
+      \range{pages}{11}
+      \verb{doi}
+      \verb 10.1093/biomet/76.2.297
+      \endverb
+      \verb{urlraw}
+      \verb https://academic.oup.com/biomet/article-lookup/doi/10.1093/biomet/76.2.297
+      \endverb
+      \verb{url}
+      \verb https://academic.oup.com/biomet/article-lookup/doi/10.1093/biomet/76.2.297
+      \endverb
+    \endentry
+    \entry{Kaufmann1981}{article}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=6a9b8b9167ed3127fa90c5c9b3921167}{%
+           family={Kaufmann},
+           familyi={K\bibinitperiod},
+           given={Karl\bibnamedelima W.},
+           giveni={K\bibinitperiod\bibinitdelim W\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{6a9b8b9167ed3127fa90c5c9b3921167}
+      \strng{fullhash}{6a9b8b9167ed3127fa90c5c9b3921167}
+      \strng{bibnamehash}{6a9b8b9167ed3127fa90c5c9b3921167}
+      \strng{authorbibnamehash}{6a9b8b9167ed3127fa90c5c9b3921167}
+      \strng{authornamehash}{6a9b8b9167ed3127fa90c5c9b3921167}
+      \strng{authorfullhash}{6a9b8b9167ed3127fa90c5c9b3921167}
+      \field{sortinit}{K}
+      \field{sortinithash}{d3edc18d54b9438a72c24c925bfb38f4}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{year}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{issn}{0029-8549}
+      \field{journaltitle}{Oecologia}
+      \field{month}{7}
+      \field{number}{3}
+      \field{title}{{Fitting and using growth curves}}
+      \field{volume}{49}
+      \field{year}{1981}
+      \field{pages}{293\bibrangedash 299}
+      \range{pages}{7}
+      \verb{doi}
+      \verb 10.1007/BF00347588
+      \endverb
+      \verb{urlraw}
+      \verb http://link.springer.com/10.1007/BF00347588
+      \endverb
+      \verb{url}
+      \verb http://link.springer.com/10.1007/BF00347588
+      \endverb
+    \endentry
+    \entry{Keskin2009}{article}{}
+      \name{author}{4}{}{%
+        {{un=0,uniquepart=base,hash=d38daa6a77dd45d09eb2b0027b9c23b8}{%
+           family={Keskin},
+           familyi={K\bibinitperiod},
+           given={I},
+           giveni={I\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=3ea4a5b2ecf06cab0a1a35bc5bb393f8}{%
+           family={Dag},
+           familyi={D\bibinitperiod},
+           given={B},
+           giveni={B\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=308801b249ca219460c98fa92cc05a26}{%
+           family={Sariyel},
+           familyi={S\bibinitperiod},
+           given={V},
+           giveni={V\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=1211e2978938fd790ef589301ba12e37}{%
+           family={Gokmen},
+           familyi={G\bibinitperiod},
+           given={M},
+           giveni={M\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{8482b58438d66f4d121d6f2305b60b64}
+      \strng{fullhash}{8fb16208a9d6d2b1705972f41559f002}
+      \strng{bibnamehash}{8482b58438d66f4d121d6f2305b60b64}
+      \strng{authorbibnamehash}{8482b58438d66f4d121d6f2305b60b64}
+      \strng{authornamehash}{8482b58438d66f4d121d6f2305b60b64}
+      \strng{authorfullhash}{8fb16208a9d6d2b1705972f41559f002}
+      \field{sortinit}{K}
+      \field{sortinithash}{d3edc18d54b9438a72c24c925bfb38f4}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{year}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{issn}{2221-4062}
+      \field{journaltitle}{South African Journal of Animal Science}
+      \field{month}{7}
+      \field{number}{2}
+      \field{title}{{Estimation of growth curve parameters in Konya Merino sheep (Short communication)}}
+      \field{volume}{39}
+      \field{year}{2009}
+      \verb{doi}
+      \verb 10.4314/sajas.v39i2.44390
+      \endverb
+      \verb{urlraw}
+      \verb http://www.ajol.info/index.php/sajas/article/view/44390
+      \endverb
+      \verb{url}
+      \verb http://www.ajol.info/index.php/sajas/article/view/44390
+      \endverb
+    \endentry
+    \entry{Kheirabadi2019}{article}{}
+      \name{author}{2}{}{%
+        {{un=0,uniquepart=base,hash=e802f0823740e794ca5ef8746ba648c3}{%
+           family={Kheirabadi},
+           familyi={K\bibinitperiod},
+           given={Khabat},
+           giveni={K\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=a8e02c3e00013b88726fcd50c7764600}{%
+           family={Rashidi},
+           familyi={R\bibinitperiod},
+           given={Amir},
+           giveni={A\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{4501fbe2ca3685d4985f44bce7694615}
+      \strng{fullhash}{4501fbe2ca3685d4985f44bce7694615}
+      \strng{bibnamehash}{4501fbe2ca3685d4985f44bce7694615}
+      \strng{authorbibnamehash}{4501fbe2ca3685d4985f44bce7694615}
+      \strng{authornamehash}{4501fbe2ca3685d4985f44bce7694615}
+      \strng{authorfullhash}{4501fbe2ca3685d4985f44bce7694615}
+      \field{sortinit}{K}
+      \field{sortinithash}{d3edc18d54b9438a72c24c925bfb38f4}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{year}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{issn}{09214488}
+      \field{journaltitle}{Small Ruminant Research}
+      \field{month}{1}
+      \field{title}{{Modelling and genetic evaluation of Markhoz goat growth curve parameters}}
+      \field{volume}{170}
+      \field{year}{2019}
+      \field{pages}{43\bibrangedash 50}
+      \range{pages}{8}
+      \verb{doi}
+      \verb 10.1016/j.smallrumres.2018.11.017
+      \endverb
+      \verb{urlraw}
+      \verb https://linkinghub.elsevier.com/retrieve/pii/S0921448818305212
+      \endverb
+      \verb{url}
+      \verb https://linkinghub.elsevier.com/retrieve/pii/S0921448818305212
+      \endverb
+    \endentry
+    \entry{AndrewH.2013}{incollection}{}
+      \name{author}{4}{}{%
+        {{un=1,uniquepart=given,hash=5497038776ea8cb9f349c85763b1490b}{%
+           family={Lee},
+           familyi={L\bibinitperiod},
+           given={Andrew\bibnamedelima H.},
+           giveni={A\bibinitperiod\bibinitdelim H\bibinitperiod},
+           givenun=1}}%
+        {{un=0,uniquepart=base,hash=4f7d98006f338aff1d7303e11302e981}{%
+           family={Huttenlocker},
+           familyi={H\bibinitperiod},
+           given={Adam\bibnamedelima K.},
+           giveni={A\bibinitperiod\bibinitdelim K\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=b707d8ffb1171d48f3d31b7eb4770899}{%
+           family={Padian},
+           familyi={P\bibinitperiod},
+           given={Kevin},
+           giveni={K\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=c2eac98fa4cb8e96c2a553a54788162f}{%
+           family={Woodward},
+           familyi={W\bibinitperiod},
+           given={Holly\bibnamedelima N.},
+           giveni={H\bibinitperiod\bibinitdelim N\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{publisher}{1}{%
+        {University of California Press}%
+      }
+      \strng{namehash}{5fd2caec71280b55228978d2dc9267c1}
+      \strng{fullhash}{8da4ca9abfd37c637259449d03b7ab28}
+      \strng{bibnamehash}{5fd2caec71280b55228978d2dc9267c1}
+      \strng{authorbibnamehash}{5fd2caec71280b55228978d2dc9267c1}
+      \strng{authornamehash}{5fd2caec71280b55228978d2dc9267c1}
+      \strng{authorfullhash}{8da4ca9abfd37c637259449d03b7ab28}
+      \field{sortinit}{L}
+      \field{sortinithash}{dad3efd0836470093a7b4a7bb756eb8c}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{year}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{Bone Histology of Fossil Tetrapods}
+      \field{month}{3}
+      \field{title}{{Analysis of Growth Rates}}
+      \field{year}{2013}
+      \field{pages}{216\bibrangedash 251}
+      \range{pages}{36}
+      \verb{doi}
+      \verb 10.1525/california/9780520273528.003.0008
+      \endverb
+      \verb{urlraw}
+      \verb http://california.universitypressscholarship.com/view/10.1525/california/9780520273528.001.0001/upso-9780520273528-chapter-8
+      \endverb
+      \verb{url}
+      \verb http://california.universitypressscholarship.com/view/10.1525/california/9780520273528.001.0001/upso-9780520273528-chapter-8
+      \endverb
+    \endentry
+    \entry{Lehman2008}{article}{}
+      \name{author}{2}{}{%
+        {{un=0,uniquepart=base,hash=70c2ed002fd2c8312cd981707125ce1d}{%
+           family={Lehman},
+           familyi={L\bibinitperiod},
+           given={Thomas\bibnamedelima M},
+           giveni={T\bibinitperiod\bibinitdelim M\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=c2eac98fa4cb8e96c2a553a54788162f}{%
+           family={Woodward},
+           familyi={W\bibinitperiod},
+           given={Holly\bibnamedelima N},
+           giveni={H\bibinitperiod\bibinitdelim N\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{c97838cebafe362f4488696b07dc969a}
+      \strng{fullhash}{c97838cebafe362f4488696b07dc969a}
+      \strng{bibnamehash}{c97838cebafe362f4488696b07dc969a}
+      \strng{authorbibnamehash}{c97838cebafe362f4488696b07dc969a}
+      \strng{authornamehash}{c97838cebafe362f4488696b07dc969a}
+      \strng{authorfullhash}{c97838cebafe362f4488696b07dc969a}
+      \field{sortinit}{L}
+      \field{sortinithash}{dad3efd0836470093a7b4a7bb756eb8c}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{year}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Paleobiology}
+      \field{number}{4}
+      \field{title}{{Modelling growth rates for sauropod dinosaurs}}
+      \field{volume}{32}
+      \field{year}{2008}
+      \field{pages}{264\bibrangedash 281}
+      \range{pages}{18}
+      \verb{doi}
+      \verb 10.1666/0094-8373(2008)034[0264:MGRFSD]2.0.CO;2
+      \endverb
+    \endentry
+    \entry{Li2019}{incollection}{}
+      \name{author}{2}{}{%
+        {{un=0,uniquepart=base,hash=82f3b20cc00fd0421acd73c171fd79c6}{%
+           family={Li},
+           familyi={L\bibinitperiod},
+           given={Zhihua},
+           giveni={Z\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=61a5f11b3a300a191d13bd823c06cf4c}{%
+           family={Zhao},
+           familyi={Z\bibinitperiod},
+           given={Xin},
+           giveni={X\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{646cd47f4a91e5159ea65b71d6083cf1}
+      \strng{fullhash}{646cd47f4a91e5159ea65b71d6083cf1}
+      \strng{bibnamehash}{646cd47f4a91e5159ea65b71d6083cf1}
+      \strng{authorbibnamehash}{646cd47f4a91e5159ea65b71d6083cf1}
+      \strng{authornamehash}{646cd47f4a91e5159ea65b71d6083cf1}
+      \strng{authorfullhash}{646cd47f4a91e5159ea65b71d6083cf1}
+      \field{sortinit}{L}
+      \field{sortinithash}{dad3efd0836470093a7b4a7bb756eb8c}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{year}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{{Curve Fitting Derivative Method and Its Application in Mouse Growth}}
+      \field{year}{2019}
+      \field{pages}{126\bibrangedash 133}
+      \range{pages}{8}
+      \verb{doi}
+      \verb 10.1007/978-3-030-06137-1_13
+      \endverb
+      \verb{urlraw}
+      \verb http://link.springer.com/10.1007/978-3-030-06137-1{\_}13
+      \endverb
+      \verb{url}
+      \verb http://link.springer.com/10.1007/978-3-030-06137-1%7B%5C_%7D13
+      \endverb
+    \endentry
+    \entry{Mayberry2018}{article}{}
+      \name{author}{4}{}{%
+        {{un=0,uniquepart=base,hash=1ec431ad9906e4f8f07d41b1fc64d07c}{%
+           family={Mayberry},
+           familyi={M\bibinitperiod},
+           given={Chris},
+           giveni={C\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=395d4b3047b6dbe7d0b032463546a82d}{%
+           family={Bencini},
+           familyi={B\bibinitperiod},
+           given={Roberta},
+           giveni={R\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=e35e2593f659e2aebe02981d3e164de4}{%
+           family={Mawson},
+           familyi={M\bibinitperiod},
+           given={Peter\bibnamedelima R.},
+           giveni={P\bibinitperiod\bibinitdelim R\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=d90bbec596313de97a73c3b79b3d8849}{%
+           family={Maloney},
+           familyi={M\bibinitperiod},
+           given={Shane\bibnamedelima K.},
+           giveni={S\bibinitperiod\bibinitdelim K\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{af79e5ceeef8febc8335dbbe616b180f}
+      \strng{fullhash}{e55c6f9fd78a83f4a68193ee54fbd98a}
+      \strng{bibnamehash}{af79e5ceeef8febc8335dbbe616b180f}
+      \strng{authorbibnamehash}{af79e5ceeef8febc8335dbbe616b180f}
+      \strng{authornamehash}{af79e5ceeef8febc8335dbbe616b180f}
+      \strng{authorfullhash}{e55c6f9fd78a83f4a68193ee54fbd98a}
+      \field{sortinit}{M}
+      \field{sortinithash}{2e5c2f51f7fa2d957f3206819bf86dc3}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{year}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{Scientific studies and population management may benefit from knowledge of the age structure of a target population. We evaluated traditional and newly developed methods of estimating the age of kangaroos with data from 336 western grey kangaroos (Macropus fuliginosus) culled from a wild population in south-western Australia. We compared their ages based on molar progression with data on head, leg, and foot length, a balanced sum of all three measures, dried eye-lens weight, and molar wear score, and derived formulae to estimate age from each variable. Molar wear score has a linear relationship to molar progression and therefore leads to similar estimations of age, but requires only one complete arcade of molars. Because the relationships between age and the lengths of head, foot and leg are curvilinear, these become less reliable indicators of age with increasing age but the accuracy can be improved by considering a combination of the lengths of head, foot, and leg. Estimation of age from dried lens weight is more accurate than estimation from morphometry. The use of morphometry to estimate the age of kangaroos older than two years is more reliable than previously thought and requisite data can be collected from live animals. Where lethal methods are needed to collect samples, a largely intact skull, a single arcade of molars, or the lens extracted from one eye can reliably be used to estimate age.}
+      \field{issn}{0310-0049}
+      \field{journaltitle}{Australian Mammalogy}
+      \field{number}{2}
+      \field{title}{{Estimating the age of western grey kangaroos (Macropus fuliginosus ocydromus)}}
+      \field{volume}{40}
+      \field{year}{2018}
+      \field{pages}{254}
+      \range{pages}{1}
+      \verb{doi}
+      \verb 10.1071/AM16058
+      \endverb
+      \verb{urlraw}
+      \verb http://www.publish.csiro.au/?paper=AM16058
+      \endverb
+      \verb{url}
+      \verb http://www.publish.csiro.au/?paper=AM16058
+      \endverb
+    \endentry
+    \entry{McQuarrie1999}{article}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=969e04039544fd80d936d93bc45c399d}{%
+           family={McQuarrie},
+           familyi={M\bibinitperiod},
+           given={Allan\bibnamedelima D.},
+           giveni={A\bibinitperiod\bibinitdelim D\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{969e04039544fd80d936d93bc45c399d}
+      \strng{fullhash}{969e04039544fd80d936d93bc45c399d}
+      \strng{bibnamehash}{969e04039544fd80d936d93bc45c399d}
+      \strng{authorbibnamehash}{969e04039544fd80d936d93bc45c399d}
+      \strng{authornamehash}{969e04039544fd80d936d93bc45c399d}
+      \strng{authorfullhash}{969e04039544fd80d936d93bc45c399d}
+      \field{sortinit}{M}
+      \field{sortinithash}{2e5c2f51f7fa2d957f3206819bf86dc3}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{year}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{issn}{01677152}
+      \field{journaltitle}{Statistics {\&} Probability Letters}
+      \field{month}{8}
+      \field{number}{1}
+      \field{title}{{A small-sample correction for the Schwarz SIC model selection criterion}}
+      \field{volume}{44}
+      \field{year}{1999}
+      \field{pages}{79\bibrangedash 86}
+      \range{pages}{8}
+      \verb{doi}
+      \verb 10.1016/S0167-7152(98)00294-6
+      \endverb
+      \verb{urlraw}
+      \verb https://linkinghub.elsevier.com/retrieve/pii/S0167715298002946
+      \endverb
+      \verb{url}
+      \verb https://linkinghub.elsevier.com/retrieve/pii/S0167715298002946
+      \endverb
+    \endentry
+    \entry{Myhrvold2013}{article}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=fca05a9ebf0f5bb792af0e8364e3237d}{%
+           family={Myhrvold},
+           familyi={M\bibinitperiod},
+           given={Nathan\bibnamedelima P.},
+           giveni={N\bibinitperiod\bibinitdelim P\bibinitperiod},
+           givenun=0}}%
+      }
+      \name{editor}{1}{}{%
+        {{hash=7f2f16e522f8e8d66b14494f8864c91d}{%
+           family={Evans},
+           familyi={E\bibinitperiod},
+           given={Alistair\bibnamedelima Robert},
+           giveni={A\bibinitperiod\bibinitdelim R\bibinitperiod}}}%
+      }
+      \strng{namehash}{fca05a9ebf0f5bb792af0e8364e3237d}
+      \strng{fullhash}{fca05a9ebf0f5bb792af0e8364e3237d}
+      \strng{bibnamehash}{fca05a9ebf0f5bb792af0e8364e3237d}
+      \strng{authorbibnamehash}{fca05a9ebf0f5bb792af0e8364e3237d}
+      \strng{authornamehash}{fca05a9ebf0f5bb792af0e8364e3237d}
+      \strng{authorfullhash}{fca05a9ebf0f5bb792af0e8364e3237d}
+      \strng{editorbibnamehash}{7f2f16e522f8e8d66b14494f8864c91d}
+      \strng{editornamehash}{7f2f16e522f8e8d66b14494f8864c91d}
+      \strng{editorfullhash}{7f2f16e522f8e8d66b14494f8864c91d}
+      \field{extraname}{1}
+      \field{sortinit}{M}
+      \field{sortinithash}{2e5c2f51f7fa2d957f3206819bf86dc3}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{year}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{issn}{1932-6203}
+      \field{journaltitle}{PLoS ONE}
+      \field{month}{12}
+      \field{number}{12}
+      \field{title}{{Revisiting the Estimation of Dinosaur Growth Rates}}
+      \field{volume}{8}
+      \field{year}{2013}
+      \field{pages}{e81917}
+      \range{pages}{-1}
+      \verb{doi}
+      \verb 10.1371/journal.pone.0081917
+      \endverb
+      \verb{urlraw}
+      \verb https://dx.plos.org/10.1371/journal.pone.0081917
+      \endverb
+      \verb{url}
+      \verb https://dx.plos.org/10.1371/journal.pone.0081917
+      \endverb
+    \endentry
+    \entry{Myhrvold2015}{article}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=fca05a9ebf0f5bb792af0e8364e3237d}{%
+           family={Myhrvold},
+           familyi={M\bibinitperiod},
+           given={Nathan\bibnamedelima P.},
+           giveni={N\bibinitperiod\bibinitdelim P\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{fca05a9ebf0f5bb792af0e8364e3237d}
+      \strng{fullhash}{fca05a9ebf0f5bb792af0e8364e3237d}
+      \strng{bibnamehash}{fca05a9ebf0f5bb792af0e8364e3237d}
+      \strng{authorbibnamehash}{fca05a9ebf0f5bb792af0e8364e3237d}
+      \strng{authornamehash}{fca05a9ebf0f5bb792af0e8364e3237d}
+      \strng{authorfullhash}{fca05a9ebf0f5bb792af0e8364e3237d}
+      \field{extraname}{2}
+      \field{sortinit}{M}
+      \field{sortinithash}{2e5c2f51f7fa2d957f3206819bf86dc3}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{year}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{issn}{19328486}
+      \field{journaltitle}{The Anatomical Record}
+      \field{month}{3}
+      \field{number}{3}
+      \field{title}{{Problems in Erickson et al. 2009}}
+      \field{volume}{298}
+      \field{year}{2015}
+      \field{pages}{489\bibrangedash 493}
+      \range{pages}{5}
+      \verb{doi}
+      \verb 10.1002/ar.23101
+      \endverb
+      \verb{urlraw}
+      \verb http://doi.wiley.com/10.1002/ar.23101
+      \endverb
+      \verb{url}
+      \verb http://doi.wiley.com/10.1002/ar.23101
+      \endverb
+    \endentry
+    \entry{Perotto1992}{article}{}
+      \name{author}{3}{}{%
+        {{un=0,uniquepart=base,hash=2f6de275cb5b35631f62f286526f76eb}{%
+           family={Perotto},
+           familyi={P\bibinitperiod},
+           given={D.},
+           giveni={D\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=5e1f17cc3acee9350d1187a7b4e694ab}{%
+           family={Cue},
+           familyi={C\bibinitperiod},
+           given={R.\bibnamedelimi I.},
+           giveni={R\bibinitperiod\bibinitdelim I\bibinitperiod},
+           givenun=0}}%
+        {{un=1,uniquepart=given,hash=2bcf6cad251d975b02d256f56b7281d6}{%
+           family={Lee},
+           familyi={L\bibinitperiod},
+           given={A.\bibnamedelimi J.},
+           giveni={A\bibinitperiod\bibinitdelim J\bibinitperiod},
+           givenun=1}}%
+      }
+      \strng{namehash}{16fbbb2d280abfc9c6a0395613b0af9f}
+      \strng{fullhash}{16fbbb2d280abfc9c6a0395613b0af9f}
+      \strng{bibnamehash}{16fbbb2d280abfc9c6a0395613b0af9f}
+      \strng{authorbibnamehash}{16fbbb2d280abfc9c6a0395613b0af9f}
+      \strng{authornamehash}{16fbbb2d280abfc9c6a0395613b0af9f}
+      \strng{authorfullhash}{16fbbb2d280abfc9c6a0395613b0af9f}
+      \field{sortinit}{P}
+      \field{sortinithash}{bb5b15f2db90f7aef79bb9e83defefcb}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{year}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{The Richards (RCD), the Gompertz (GMP), the monomolecular (MON) and the logistic (LOG) functions were compared for describing the growth curve of 343 female dairy cattle for which 12–18 body-weight measures were available. The animals were divided into four groups, and each function was assigned to one of the groups. Analyses of variance of growth traits estimated by the four functions and of the residual mean squares (RMS) indicated that all differences between functions in estimated mature weight (A) were statistically significant (P < 0.01 to P < 0.0001) except for RCD vs. GMP (P < 0.27). Differences between functions in RMS were significant for RCD vs. LOG (P < 0.0026), MON vs. LOG (P < 0.0044) and GMP vs. LOG (P < 0.0584). RCD differed from all other functions in average lifetime growth rate (P < 0.1 to P < 0.0001) and from MON (P < 0.0004) and GMP (P < 0.0003) in average lifetime maturing rate. Analysis of residuals indicated that both GMP and LOG overestimated birth weight. MON overestimated mature weight, whereas LOG tended to underestimate this parameter. The Richards function was chosen to describe the actual growth curves of individual females of three different genotypes. Predictive equations for the three breed groups were derived. Key words: Dairy cattle, growth curves, nonlinear functions}
+      \field{issn}{0008-3984}
+      \field{journaltitle}{Canadian Journal of Animal Science}
+      \field{month}{12}
+      \field{number}{4}
+      \field{title}{{Comparison of nonlinear functions for describing the growth curve of three genotypes of dairy cattle}}
+      \field{volume}{72}
+      \field{year}{1992}
+      \field{pages}{773\bibrangedash 782}
+      \range{pages}{10}
+      \verb{doi}
+      \verb 10.4141/cjas92-089
+      \endverb
+      \verb{urlraw}
+      \verb http://www.nrcresearchpress.com/doi/10.4141/cjas92-089
+      \endverb
+      \verb{url}
+      \verb http://www.nrcresearchpress.com/doi/10.4141/cjas92-089
+      \endverb
+    \endentry
+    \entry{Raji2014}{article}{}
+      \name{author}{3}{}{%
+        {{un=0,uniquepart=base,hash=88cb88385c7616c7382daa265c393887}{%
+           family={Raji},
+           familyi={R\bibinitperiod},
+           given={A.O.},
+           giveni={A\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=eb08579130a799245049d61f11f03cda}{%
+           family={Alade},
+           familyi={A\bibinitperiod},
+           given={N.K.},
+           giveni={N\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=0234a5ffb3ad11c27024e6f0d521388b}{%
+           family={Duwa},
+           familyi={D\bibinitperiod},
+           given={H.},
+           giveni={H\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{eb56873ecfea5b4809074fdb71ac1801}
+      \strng{fullhash}{eb56873ecfea5b4809074fdb71ac1801}
+      \strng{bibnamehash}{eb56873ecfea5b4809074fdb71ac1801}
+      \strng{authorbibnamehash}{eb56873ecfea5b4809074fdb71ac1801}
+      \strng{authornamehash}{eb56873ecfea5b4809074fdb71ac1801}
+      \strng{authorfullhash}{eb56873ecfea5b4809074fdb71ac1801}
+      \field{sortinit}{R}
+      \field{sortinithash}{b9c68a358aea118dfa887b6e902414a7}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{year}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Archivos de Zootecnia}
+      \field{number}{243}
+      \field{title}{{Estimation of model parameters of the Japanese quail growth curve using Gompertz model.}}
+      \field{volume}{63}
+      \field{year}{2014}
+      \verb{urlraw}
+      \verb https://www.redalyc.org/articulo.oa?id=495/49532487004
+      \endverb
+      \verb{url}
+      \verb https://www.redalyc.org/articulo.oa?id=495/49532487004
+      \endverb
+    \endentry
+    \entry{Schwarz1978}{article}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=7434820123b7dda72fff7a710dc36bc0}{%
+           family={Schwarz},
+           familyi={S\bibinitperiod},
+           given={Gideon},
+           giveni={G\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{7434820123b7dda72fff7a710dc36bc0}
+      \strng{fullhash}{7434820123b7dda72fff7a710dc36bc0}
+      \strng{bibnamehash}{7434820123b7dda72fff7a710dc36bc0}
+      \strng{authorbibnamehash}{7434820123b7dda72fff7a710dc36bc0}
+      \strng{authornamehash}{7434820123b7dda72fff7a710dc36bc0}
+      \strng{authorfullhash}{7434820123b7dda72fff7a710dc36bc0}
+      \field{sortinit}{S}
+      \field{sortinithash}{c319cff79d99c853d775f88277d4e45f}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{year}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{issn}{0090-5364}
+      \field{journaltitle}{The Annals of Statistics}
+      \field{month}{3}
+      \field{number}{2}
+      \field{title}{{Estimating the Dimension of a Model}}
+      \field{volume}{6}
+      \field{year}{1978}
+      \field{pages}{461\bibrangedash 464}
+      \range{pages}{4}
+      \verb{doi}
+      \verb 10.1214/aos/1176344136
+      \endverb
+      \verb{urlraw}
+      \verb http://projecteuclid.org/euclid.aos/1176344136
+      \endverb
+      \verb{url}
+      \verb http://projecteuclid.org/euclid.aos/1176344136
+      \endverb
+    \endentry
+    \entry{Tjorve2010}{article}{}
+      \name{author}{2}{}{%
+        {{un=1,uniquepart=given,hash=34fa38a92ef5c636ca90d38bcdf3b6e0}{%
+           family={Tj{ø}rve},
+           familyi={T\bibinitperiod},
+           given={Even},
+           giveni={E\bibinitperiod},
+           givenun=1}}%
+        {{un=1,uniquepart=given,hash=b30315dca2a3f992b87efab99c2af101}{%
+           family={Tj{ø}rve},
+           familyi={T\bibinitperiod},
+           given={Kathleen\bibnamedelima M.C.},
+           giveni={K\bibinitperiod\bibinitdelim M\bibinitperiod},
+           givenun=1}}%
+      }
+      \strng{namehash}{6b5d23d2bfb41fdd970731532d0ade77}
+      \strng{fullhash}{6b5d23d2bfb41fdd970731532d0ade77}
+      \strng{bibnamehash}{6b5d23d2bfb41fdd970731532d0ade77}
+      \strng{authorbibnamehash}{6b5d23d2bfb41fdd970731532d0ade77}
+      \strng{authornamehash}{6b5d23d2bfb41fdd970731532d0ade77}
+      \strng{authorfullhash}{6b5d23d2bfb41fdd970731532d0ade77}
+      \field{sortinit}{T}
+      \field{sortinithash}{51f9faf24c60c62ca764a77f78cf5666}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{year}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{issn}{00225193}
+      \field{journaltitle}{Journal of Theoretical Biology}
+      \field{month}{12}
+      \field{number}{3}
+      \field{title}{{A unified approach to the Richards-model family for use in growth analyses: Why we need only two model forms}}
+      \field{volume}{267}
+      \field{year}{2010}
+      \field{pages}{417\bibrangedash 425}
+      \range{pages}{9}
+      \verb{doi}
+      \verb 10.1016/j.jtbi.2010.09.008
+      \endverb
+      \verb{urlraw}
+      \verb https://linkinghub.elsevier.com/retrieve/pii/S0022519310004741
+      \endverb
+      \verb{url}
+      \verb https://linkinghub.elsevier.com/retrieve/pii/S0022519310004741
+      \endverb
+    \endentry
+    \entry{Waheed2011}{article}{}
+      \name{author}{4}{}{%
+        {{un=0,uniquepart=base,hash=57dbbcafa73b82a993fd178db2cb39eb}{%
+           family={Waheed},
+           familyi={W\bibinitperiod},
+           given={Abdul},
+           giveni={A\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=1fdf139d175292cae6250ac9d483cda9}{%
+           family={Khan},
+           familyi={K\bibinitperiod},
+           given={M.\bibnamedelimi Sajjad},
+           giveni={M\bibinitperiod\bibinitdelim S\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=c10f7998ec3f5a35ff0ef178d413b15b}{%
+           family={Ali},
+           familyi={A\bibinitperiod},
+           given={Safdar},
+           giveni={S\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=dcb55509bc3613f181ce3166f7ffc34a}{%
+           family={Sarwar},
+           familyi={S\bibinitperiod},
+           given={Muhammad},
+           giveni={M\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{920b98cb3e0269c4e9ff98584079e909}
+      \strng{fullhash}{58a20b706cd49b64a20c059018cc9532}
+      \strng{bibnamehash}{920b98cb3e0269c4e9ff98584079e909}
+      \strng{authorbibnamehash}{920b98cb3e0269c4e9ff98584079e909}
+      \strng{authornamehash}{920b98cb3e0269c4e9ff98584079e909}
+      \strng{authorfullhash}{58a20b706cd49b64a20c059018cc9532}
+      \field{sortinit}{W}
+      \field{sortinithash}{1af34bd8c148ffb32de1494636b49713}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{year}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Archives Animal Breeding}
+      \field{number}{3}
+      \field{title}{{Estimation of growth curve parameters in Beetal goats}}
+      \field{volume}{54}
+      \field{year}{2011}
+      \field{pages}{287\bibrangedash 296}
+      \range{pages}{10}
+    \endentry
+    \entry{Xie2020}{article}{}
+      \name{author}{6}{}{%
+        {{un=0,uniquepart=base,hash=fabc61a78d637082f3b0c1c03d5a368b}{%
+           family={Xie},
+           familyi={X\bibinitperiod},
+           given={W.\bibnamedelimi Y.},
+           giveni={W\bibinitperiod\bibinitdelim Y\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=01840b5878b67f9a56b4c510f7fe27b6}{%
+           family={Pan},
+           familyi={P\bibinitperiod},
+           given={N.\bibnamedelimi X.},
+           giveni={N\bibinitperiod\bibinitdelim X\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=874e3cb5fa4f17ee4d66976f43bb1053}{%
+           family={Zeng},
+           familyi={Z\bibinitperiod},
+           given={H.\bibnamedelimi R.},
+           giveni={H\bibinitperiod\bibinitdelim R\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=dcb12c5122f36421bfc683326f4873b0}{%
+           family={Yan},
+           familyi={Y\bibinitperiod},
+           given={H.\bibnamedelimi C.},
+           giveni={H\bibinitperiod\bibinitdelim C\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=a89432bb376a132cc17bb4f62e9e7f7e}{%
+           family={Wang},
+           familyi={W\bibinitperiod},
+           given={X.\bibnamedelimi Q.},
+           giveni={X\bibinitperiod\bibinitdelim Q\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=b8480f5a6100b4ee8a21499e0411dc79}{%
+           family={Gao},
+           familyi={G\bibinitperiod},
+           given={C.\bibnamedelimi Q.},
+           giveni={C\bibinitperiod\bibinitdelim Q\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{edf0d7ef10509f0be483598ad09cf6f6}
+      \strng{fullhash}{8ffcc41f83cd92bc104783905434f814}
+      \strng{bibnamehash}{edf0d7ef10509f0be483598ad09cf6f6}
+      \strng{authorbibnamehash}{edf0d7ef10509f0be483598ad09cf6f6}
+      \strng{authornamehash}{edf0d7ef10509f0be483598ad09cf6f6}
+      \strng{authorfullhash}{8ffcc41f83cd92bc104783905434f814}
+      \field{sortinit}{X}
+      \field{sortinithash}{e90038f30fa4b9ce59606fc8347e3cc7}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{year}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{Feathers play a critical role in thermoregulation and directly influence poultry production. Poor feathering adversely affects living appearance and carcass quality, thus reducing profits. However, producers tend to ignore the importance of feather development and do not know the laws of feather growth and development. The objective of this study was to fit growth curves to describe the growth and development of feathers in yellow-feathered broilers during the embryonic and posthatching periods using different nonlinear functions (Gompertz, logistic and Bertalanffy). Feather mass and length were determined during the embryonic development and posthatching stages to identify which growth model most accurately described the feather growth pattern. The results showed that chick embryos began to grow feathers at approximately embryonic (E) day 10, and the feathers grew rapidly from E13 to E17. There was little change from E17 to the day of hatching (DOH) . During the embryonic period, the Gompertz function ( Y = 798.48e −203 431exp(−0.87 t ) , Akaike's information criterion ( AIC ) = −0.950 × 10 3 , Bayesian information criterion ( BIC ) = −0.711 × 10 3 and mean square error ( MSE ) = 559.308) provided the best fit for the feather growth curve compared with the other two functions. After hatching, feather mass and length changed little from the DOH to day (D) 14, increased rapidly from D21 to D91 and then grew slowly after D91. The first stage of feather molting occurred from 2 to 3 weeks of age when the down feathers were mostly shed and replaced with juvenile feathers, and the second stage occurred at approximately 13 to 15 weeks of age. The three nonlinear functions could overall fit the feather growth curve well, but the Bertalanffy model ( Y = 116.88 × (1−0.86e −0.02 t ) 3 , AIC = 1.065 × 10 5 , BIC = 1.077 × 10 5 and MSE = 11.308) showed the highest degree of fit among the models. Therefore, the Gompertz model exhibited the best goodness of fit for the feather growth curve during the embryonic development, while the Bertalanffy model was the most suitable model due to its accurate ability to predict the growth and development of feathers during the growth period, which is an important commercial characteristic of yellow-feathered chickens.}
+      \field{issn}{1751-7311}
+      \field{journaltitle}{animal}
+      \field{month}{5}
+      \field{number}{5}
+      \field{title}{{Comparison of nonlinear models to describe the feather growth and development curve in yellow-feathered chickens}}
+      \field{volume}{14}
+      \field{year}{2020}
+      \field{pages}{1005\bibrangedash 1013}
+      \range{pages}{9}
+      \verb{doi}
+      \verb 10.1017/S1751731119003082
+      \endverb
+      \verb{urlraw}
+      \verb https://www.cambridge.org/core/product/identifier/S1751731119003082/type/journal{\_}article
+      \endverb
+      \verb{url}
+      \verb https://www.cambridge.org/core/product/identifier/S1751731119003082/type/journal%7B%5C_%7Darticle
+      \endverb
+    \endentry
+    \entry{Yakupoglu2001}{article}{}
+      \name{author}{2}{}{%
+        {{un=0,uniquepart=base,hash=55bac6ad3891ae6dd6c805add9f9e561}{%
+           family={Yakupoglu},
+           familyi={Y\bibinitperiod},
+           given={C.},
+           giveni={C\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=3cf4b5ad4a948ac5e65c887eed6abf56}{%
+           family={Atil},
+           familyi={A\bibinitperiod},
+           given={H.},
+           giveni={H\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{c22fa7d5643713e472efb7a38ff35369}
+      \strng{fullhash}{c22fa7d5643713e472efb7a38ff35369}
+      \strng{bibnamehash}{c22fa7d5643713e472efb7a38ff35369}
+      \strng{authorbibnamehash}{c22fa7d5643713e472efb7a38ff35369}
+      \strng{authornamehash}{c22fa7d5643713e472efb7a38ff35369}
+      \strng{authorfullhash}{c22fa7d5643713e472efb7a38ff35369}
+      \field{sortinit}{Y}
+      \field{sortinithash}{6ae2ff5458ff901249c2745238c951b7}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{year}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Online Journal of Biological Sciences}
+      \field{title}{{Comparison of Growth Curve Models on Broilers II. Comparison of Models}}
+      \field{year}{2001}
+      \field{pages}{682\bibrangedash 684}
+      \range{pages}{3}
+    \endentry
+    \entry{Zwolak2007}{article}{}
+      \name{author}{3}{}{%
+        {{un=0,uniquepart=base,hash=e70124fe0bf14176b8637706228199c8}{%
+           family={Zwolak},
+           familyi={Z\bibinitperiod},
+           given={Jason\bibnamedelima W.},
+           giveni={J\bibinitperiod\bibinitdelim W\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=3fd71b507159de8265688af1f476a9af}{%
+           family={Boggs},
+           familyi={B\bibinitperiod},
+           given={Paul\bibnamedelima T.},
+           giveni={P\bibinitperiod\bibinitdelim T\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=fe0a6c5354fc1d6a576d56f4ff33db8e}{%
+           family={Watson},
+           familyi={W\bibinitperiod},
+           given={Layne\bibnamedelima T.},
+           giveni={L\bibinitperiod\bibinitdelim T\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{2c26b42a8699fa88f4b0391676e6a60a}
+      \strng{fullhash}{2c26b42a8699fa88f4b0391676e6a60a}
+      \strng{bibnamehash}{2c26b42a8699fa88f4b0391676e6a60a}
+      \strng{authorbibnamehash}{2c26b42a8699fa88f4b0391676e6a60a}
+      \strng{authornamehash}{2c26b42a8699fa88f4b0391676e6a60a}
+      \strng{authorfullhash}{2c26b42a8699fa88f4b0391676e6a60a}
+      \field{sortinit}{Z}
+      \field{sortinithash}{8f7b480688e809b50b6f6577b16f3db5}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{year}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{issn}{0098-3500}
+      \field{journaltitle}{ACM Transactions on Mathematical Software}
+      \field{month}{8}
+      \field{number}{4}
+      \field{title}{{Algorithm 869: ODRPACK95: A weighted orthogonal distance regression code with bound constraints}}
+      \field{volume}{33}
+      \field{year}{2007}
+      \field{pages}{27}
+      \range{pages}{1}
+      \verb{doi}
+      \verb 10.1145/1268776.1268782
+      \endverb
+      \verb{urlraw}
+      \verb https://dl.acm.org/doi/10.1145/1268776.1268782
+      \endverb
+      \verb{url}
+      \verb https://dl.acm.org/doi/10.1145/1268776.1268782
+      \endverb
+    \endentry
+  \enddatalist
+\endrefsection
+\endinput
+
