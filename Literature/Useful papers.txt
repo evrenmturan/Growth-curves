@@ -1,0 +1,5 @@
+
+Kaufmann, K.W. Fitting and using growth curves. Oecologia 49, 293–299 (1981). https://doi.org/10.1007/BF00347588
+
+Burnham, Kenneth P., and David R. Anderson. "Multimodel inference: understanding AIC and BIC in model selection." Sociological methods & research 33.2 (2004): 261-304. 
+https://doi.org/10.1177/0049124104268644
