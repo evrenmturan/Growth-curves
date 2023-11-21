@@ -1,3 +1,8 @@
+
+
+[![DOI](https://zenodo.org/badge/258566569.svg)](https://zenodo.org/doi/10.5281/zenodo.10171130)
+
+
 # Growth-curves: regression and ranking of various growth curves against experimental data 
 This software automatically tests various growth curves against provided experimental data with a selection of different regression options. For more details see the pdf, Growth Curves Report, in the repository. The outputs of the program include:
 
